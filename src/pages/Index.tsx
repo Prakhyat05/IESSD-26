@@ -1,13 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/conference/Navbar";
+import HeroSection from "@/components/conference/HeroSection";
+import AboutSection from "@/components/conference/AboutSection";
+import TracksSection from "@/components/conference/TracksSection";
+import CallForPapers from "@/components/conference/CallForPapers";
+import RegistrationSection from "@/components/conference/RegistrationSection";
+import CommitteeSection from "@/components/conference/CommitteeSection";
+import VenueSection from "@/components/conference/VenueSection";
+import ContactSection from "@/components/conference/ContactSection";
+import Footer from "@/components/conference/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <TracksSection />
+      <CallForPapers />
+      <RegistrationSection />
+      <CommitteeSection />
+      <VenueSection />
+      <ContactSection />
+      <Footer />
+    </>
   );
 };
 

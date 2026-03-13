@@ -29,7 +29,7 @@ const ContactSection = () => {
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-10">
             <a href="mailto:iessd26@sliet.ac.in" className="flex items-center gap-3 text-foreground hover:text-accent transition-colors">
-              <div className="w-12 h-12 rounded-full gradient-accent flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center">
                 <Mail size={20} className="text-primary-foreground" />
               </div>
               <div className="text-left">

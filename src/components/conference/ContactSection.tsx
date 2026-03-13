@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Mail, Phone, Send } from "lucide-react";
 
 const trackContacts = [
-  { track: "Track I", email: "iessd26.track1@sliet.ac.in" },
-  { track: "Track II", email: "iessd26.track2@sliet.ac.in" },
-  { track: "Track III", email: "iessd26.track3@sliet.ac.in" },
+  { track: "Track 1", email: "iessd26-T1@sliet.ac.in", phone: "+91 9781403550" },
+  { track: "Track 2", email: "iessd26-T2@sliet.ac.in", phone: "+91 9855288502" },
+  { track: "Track 3", email: "iessd26-T3@sliet.ac.in", phone: "+91 9463077009" },
 ];
 
 const ContactSection = () => {
@@ -30,7 +30,7 @@ const ContactSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-10">
             <a href="mailto:iessd26@sliet.ac.in" className="flex items-center gap-3 text-foreground hover:text-accent transition-colors">
               <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center">
-                <Mail size={20} className="text-primary-foreground" />
+                <Mail size={20} className="text-accent-foreground" />
               </div>
               <div className="text-left">
                 <p className="text-xs text-muted-foreground">Central Email</p>
@@ -42,8 +42,9 @@ const ContactSection = () => {
                 <Phone size={20} className="text-secondary-foreground" />
               </div>
               <div className="text-left">
-                <p className="text-xs text-muted-foreground">Phone</p>
-                <p className="font-semibold text-sm">+91-XXXXX-XXXXX</p>
+                <p className="text-xs text-muted-foreground">Mobile</p>
+                <p className="font-semibold text-sm">+91 7814653808</p>
+                <p className="font-semibold text-sm">+91 9781122101</p>
               </div>
             </div>
           </div>
@@ -57,6 +58,7 @@ const ContactSection = () => {
                 <div key={c.track} className="bg-muted/50 rounded-xl p-4">
                   <p className="font-heading font-semibold text-foreground text-sm">{c.track}</p>
                   <a href={`mailto:${c.email}`} className="text-accent text-xs hover:underline break-all">{c.email}</a>
+                  <p className="text-foreground text-xs mt-1">{c.phone}</p>
                 </div>
               ))}
             </div>

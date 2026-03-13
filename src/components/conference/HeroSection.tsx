@@ -3,6 +3,11 @@ import { motion } from "framer-motion";
 import { CalendarDays, MapPin, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/sliet-campus.webp";
+import logoSliet from "@/assets/logo-sliet.jpg";
+import logoIei from "@/assets/logo-iei.jpeg";
+import logoIessd from "@/assets/logo-iessd.png";
+import logoIce from "@/assets/logo-ice.jpeg";
+import logoAtmanirbhar from "@/assets/logo-atmanirbhar.png";
 
 const targetDate = new Date("2026-06-30T23:59:59").getTime();
 

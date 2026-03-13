@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
-import { FileText, Mail } from "lucide-react";
+import { FileText, Mail, BookOpen } from "lucide-react";
 
 const dates = [
-  { event: "Abstract Submission Deadline", date: "June 30, 2026" },
-  { event: "Acceptance Notification", date: "July 31, 2026" },
-  { event: "Full Paper Submission", date: "September 30, 2026" },
+  { event: "Extended Abstract Submission", date: "June 30, 2026" },
+  { event: "Acceptance Notification of Extended Abstract", date: "July 31, 2026" },
+  { event: "Submission of Full Paper", date: "September 30, 2026" },
   { event: "Revised Paper Submission", date: "October 30, 2026" },
   { event: "Conference Dates", date: "December 4–5, 2026" },
 ];
 
 const trackEmails = [
-  { track: "Track I – Smart Manufacturing", email: "iessd26.track1@sliet.ac.in" },
-  { track: "Track II – Intelligent Robotics & Automation", email: "iessd26.track2@sliet.ac.in" },
-  { track: "Track III – Sustainable Civil Engineering", email: "iessd26.track3@sliet.ac.in" },
+  { track: "Track 1 – Innovations in Smart Manufacturing", email: "iessd26-T1@sliet.ac.in" },
+  { track: "Track 2 – Intelligent Robotics & Automation", email: "iessd26-T2@sliet.ac.in" },
+  { track: "Track 3 – Sustainability in Civil Engineering", email: "iessd26-T3@sliet.ac.in" },
 ];
 
 const CallForPapers = () => {
@@ -68,11 +68,11 @@ const CallForPapers = () => {
           >
             <h3 className="font-heading font-bold text-xl text-foreground mb-6 flex items-center gap-2">
               <Mail className="text-accent" size={22} />
-              Submission Guidelines
+              Submission of Papers
             </h3>
             <div className="bg-card rounded-2xl border border-border p-6 md:p-8 shadow-card space-y-4">
-              <p className="text-muted-foreground leading-relaxed">
-                Authors are invited to submit their original, unpublished research papers in <strong className="text-foreground">PDF format</strong> via email to the respective track.
+              <p className="text-foreground leading-relaxed text-sm">
+                Authors can submit full length paper by email to the respective track. While submitting manuscript, appropriate format must be followed. Manuscript must be submitted in <strong>PDF format</strong>. Guidelines for manuscripts preparation will be available on the website.
               </p>
               <div className="space-y-3">
                 {trackEmails.map((t) => (
@@ -83,9 +83,11 @@ const CallForPapers = () => {
                 ))}
               </div>
               <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
-                <p className="text-foreground text-sm font-medium">📢 Publication Opportunity</p>
-                <p className="text-muted-foreground text-sm mt-1">
-                  Selected papers will be considered for publication in reputed journals. Details will be announced soon.
+                <p className="text-foreground text-sm font-medium flex items-center gap-2">
+                  <BookOpen size={16} className="text-accent" /> Publication Opportunity
+                </p>
+                <p className="text-foreground text-sm mt-1">
+                  All accepted and presented manuscripts will be published in reputed journals as per their relevancy. Name of journals will be announced soon.
                 </p>
               </div>
             </div>

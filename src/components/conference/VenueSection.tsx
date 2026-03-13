@@ -2,10 +2,14 @@ import { motion } from "framer-motion";
 import { MapPin, Plane, Train, Car, Camera } from "lucide-react";
 
 const attractions = [
-  { name: "Chandigarh", desc: "The City Beautiful – ~130 km from SLIET" },
-  { name: "Amritsar", desc: "Golden Temple & Wagah Border – ~250 km" },
-  { name: "Shimla", desc: "Queen of Hills – ~280 km" },
-  { name: "New Delhi", desc: "India's Capital – ~300 km" },
+  { name: "Chandigarh", desc: "The City Beautiful – ~140 km" },
+  { name: "Amritsar", desc: "Golden Temple – ~205 km" },
+  { name: "Shimla", desc: "The Queen of the Hills – ~260 km" },
+  { name: "New Delhi", desc: "The National Capital – ~275 km" },
+  { name: "Dharamsala", desc: "Second winter capital of Himachal Pradesh – ~350 km" },
+  { name: "Manali", desc: "A gift of the Himalayas – ~410 km" },
+  { name: "Agra", desc: "The City of Taj Mahal – ~470 km" },
+  { name: "Jaipur", desc: "The Pink City – ~480 km" },
 ];
 
 const VenueSection = () => {
@@ -30,28 +34,28 @@ const VenueSection = () => {
                 <MapPin className="text-accent shrink-0 mt-1" size={22} />
                 <div>
                   <h3 className="font-heading font-bold text-foreground">SLIET, Longowal</h3>
-                  <p className="text-muted-foreground text-sm">Sant Longowal Institute of Engineering & Technology, Longowal, Sangrur, Punjab – 148106, India</p>
+                  <p className="text-foreground text-sm">Sant Longowal Institute of Engineering & Technology, Longowal-148106, Sangrur, Punjab, India (Deemed-to-be-University under MoE, Govt. of India)</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Plane className="text-accent shrink-0 mt-1" size={22} />
                 <div>
                   <h4 className="font-heading font-semibold text-foreground text-sm">Nearest Airport</h4>
-                  <p className="text-muted-foreground text-sm">Chandigarh International Airport (~130 km)</p>
+                  <p className="text-foreground text-sm">Chandigarh International Airport (~130 km)</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Train className="text-accent shrink-0 mt-1" size={22} />
                 <div>
                   <h4 className="font-heading font-semibold text-foreground text-sm">Nearest Railway Stations</h4>
-                  <p className="text-muted-foreground text-sm">Sunam (~20 km), Dhuri Junction (~30 km), Sangrur (~45 km)</p>
+                  <p className="text-foreground text-sm">Sunam (~16 km), Sangrur (~18 km), Dhuri (~32 km)</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Car className="text-accent shrink-0 mt-1" size={22} />
                 <div>
-                  <h4 className="font-heading font-semibold text-foreground text-sm">Transport for Foreign Delegates</h4>
-                  <p className="text-muted-foreground text-sm">Pick-and-drop facility will be arranged from Chandigarh Airport for international delegates.</p>
+                  <h4 className="font-heading font-semibold text-foreground text-sm">Transport for Delegates</h4>
+                  <p className="text-foreground text-sm">A pick-and-drop facility from Chandigarh Airport, along with local transportation, will be provided to foreign delegates upon request. Local transportation will also be arranged for Indian delegates.</p>
                 </div>
               </div>
             </div>
@@ -60,7 +64,7 @@ const VenueSection = () => {
           {/* Tourism */}
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h3 className="font-heading font-bold text-lg text-foreground mb-4 flex items-center gap-2">
-              <Camera className="text-accent" size={20} /> Nearby Attractions
+              <Camera className="text-accent" size={20} /> Tourism Near the Venue
             </h3>
             <div className="grid grid-cols-2 gap-4">
               {attractions.map((a, i) => (
@@ -69,11 +73,11 @@ const VenueSection = () => {
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-card rounded-xl border border-border p-5 shadow-card hover:shadow-elevated transition-shadow"
+                  transition={{ delay: i * 0.05 }}
+                  className="bg-card rounded-xl border border-border p-4 shadow-card hover:shadow-elevated transition-shadow"
                 >
-                  <h4 className="font-heading font-bold text-foreground">{a.name}</h4>
-                  <p className="text-muted-foreground text-sm mt-1">{a.desc}</p>
+                  <h4 className="font-heading font-bold text-foreground text-sm">{a.name}</h4>
+                  <p className="text-muted-foreground text-xs mt-1">{a.desc}</p>
                 </motion.div>
               ))}
             </div>

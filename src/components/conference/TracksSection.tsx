@@ -4,53 +4,46 @@ import { Cog, Bot, Building2 } from "lucide-react";
 const tracks = [
   {
     icon: Cog,
-    title: "Track I",
-    name: "Smart Manufacturing",
+    title: "Track 1",
+    name: "Innovations in Smart Manufacturing",
     topics: [
-      "Advanced Manufacturing Processes",
-      "Additive Manufacturing / 3D Printing",
-      "Sustainable & Green Manufacturing",
-      "Industry 4.0 & Smart Factories",
-      "Digital Twin & Simulation",
-      "Advanced Materials & Composites",
-      "Precision Engineering & Metrology",
-      "Supply Chain & Lean Manufacturing",
-      "CAD/CAM/CAE & CNC Technologies",
-      "Energy-efficient Manufacturing",
+      "Smart Materials and their Manufacturing",
+      "Material Recycling",
+      "Characterization",
+      "AI and ML in Manufacturing",
+      "Additive Manufacturing",
+      "Nanomaterials and Composites in Manufacturing",
+      "Manufacturing Processes",
+      "Environmental Impact Assessment in Manufacturing Processes",
+      "Optimization in Manufacturing Processes",
+      "Surface Engineering Science and Technology",
+      "Impact of Post Processing on Manufactured Components",
+      "Life Cycle Assessment of Manufacturing Processes",
     ],
   },
   {
     icon: Bot,
-    title: "Track II",
-    name: "Intelligent Robotics & Automation",
+    title: "Track 2",
+    name: "Intelligent Robotics & Automation for Sustainable Systems",
     topics: [
-      "Industrial Robotics & Cobots",
-      "Autonomous Systems & Drones",
-      "AI & Machine Learning in Automation",
-      "IoT-enabled Smart Systems",
-      "Computer Vision & Image Processing",
-      "Sensor Technologies & Embedded Systems",
-      "Cyber-Physical Systems",
-      "Human-Robot Interaction",
-      "Soft Robotics & Bio-inspired Systems",
-      "Automation in Agriculture & Healthcare",
+      "Intelligent Automation in Manufacturing System",
+      "Autonomous Robots & Robotic Systems",
+      "AI & Machine Learning Engineering",
+      "Climate-Resilient Infrastructures",
+      "Automation, Robotics, AI Smart Systems in Civil Engineering",
+      "Water Resources, Environmental and Waste Management Innovations",
     ],
   },
   {
     icon: Building2,
-    title: "Track III",
-    name: "Sustainable Civil Engineering",
+    title: "Track 3",
+    name: "Sustainability in Civil Engineering",
     topics: [
-      "Green Building Materials & Construction",
-      "Sustainable Urban Planning",
-      "Water Resources & Environmental Eng.",
-      "Geotechnical Engineering for Sustainability",
-      "Structural Health Monitoring",
-      "Renewable Energy in Civil Infrastructure",
-      "Transportation Engineering & Smart Mobility",
-      "Waste Management & Circular Economy",
-      "Climate Resilient Infrastructure",
-      "BIM & Digital Construction",
+      "Sustainable Construction Materials",
+      "Smart Construction Techniques",
+      "Energy-Efficient System and Renewable Technologies",
+      "Innovations in Urban Planning",
+      "Smart Transportation and Mobility Solutions",
     ],
   },
 ];
@@ -66,7 +59,7 @@ const TracksSection = () => {
           className="text-center mb-16"
         >
           <p className="text-accent font-heading font-semibold text-sm tracking-widest uppercase mb-2">Thematic Areas</p>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">Conference Tracks</h2>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">Tracks of IESSD'26</h2>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -80,7 +73,7 @@ const TracksSection = () => {
               className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border hover:shadow-elevated transition-shadow group"
             >
               <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-5">
-                <track.icon size={24} className="text-primary-foreground" />
+                <track.icon size={24} className="text-accent-foreground" />
               </div>
               <p className="text-accent font-semibold text-xs tracking-widest uppercase">{track.title}</p>
               <h3 className="font-heading font-bold text-lg text-foreground mt-1 mb-4">{track.name}</h3>

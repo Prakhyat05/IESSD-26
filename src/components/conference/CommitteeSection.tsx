@@ -3,52 +3,30 @@ import { Crown, Users } from "lucide-react";
 
 const leadership = [
   { role: "Chief Patron", name: "Prof. Mani Kant Paswan", title: "Director, SLIET", initials: "MKP" },
-  { role: "Chairman", name: "Prof. Shankar Singh", title: "SLIET", initials: "SS" },
-  { role: "Co-Chairman", name: "Prof. Jagtar Singh", title: "SLIET", initials: "JS" },
+  { role: "Chairman", name: "Prof. Shankar Singh", title: "Head, Mechanical & Civil Engineering", initials: "SS" },
+  { role: "Co-Chairman", name: "Prof. Jagtar Singh", title: "Department of Mechanical Engineering", initials: "JS" },
 ];
 
-const trackTeams = [
-  {
-    track: "Track I – Smart Manufacturing",
-    organizing: [
-      { name: "Dr. Ankush Anand", initials: "AA" },
-      { name: "Dr. Sehijpal Singh", initials: "SS" },
-    ],
-    joint: [
-      { name: "Dr. Amandeep Singh", initials: "AS" },
-      { name: "Dr. Kamaljit Singh", initials: "KS" },
-    ],
-  },
-  {
-    track: "Track II – Intelligent Robotics & Automation",
-    organizing: [
-      { name: "Dr. Lakhwinder Pal Singh", initials: "LS" },
-      { name: "Dr. Rupinder Singh", initials: "RS" },
-    ],
-    joint: [
-      { name: "Dr. Gurmeet Singh", initials: "GS" },
-      { name: "Dr. Harpreet Singh", initials: "HS" },
-    ],
-  },
-  {
-    track: "Track III – Sustainable Civil Engineering",
-    organizing: [
-      { name: "Dr. Harvinder Singh", initials: "HS" },
-      { name: "Dr. Madan Lal", initials: "ML" },
-    ],
-    joint: [
-      { name: "Dr. Jagbir Singh", initials: "JS" },
-      { name: "Dr. Pardeep Kumar", initials: "PK" },
-    ],
-  },
+const organizingTeam = [
+  { name: "Dr. Anil Kumar Singla", designation: "Associate Professor (ME)", initials: "AKS" },
+  { name: "Dr. Anuj Bansal", designation: "Assistant Professor (ME)", initials: "AB" },
+  { name: "Er. Jonny Singla", designation: "Assistant Professor (ME)", initials: "JS" },
+  { name: "Er. Divesh Bharti", designation: "Assistant Professor (ME)", initials: "DB" },
+  { name: "Prof. R. K. Saxena", designation: "Professor (ME)", initials: "RKS" },
+  { name: "Dr. Sunil Kumar", designation: "Associate Professor (ME)", initials: "SK" },
+  { name: "Dr. Vivek Kumar", designation: "Associate Professor (ME)", initials: "VK" },
+  { name: "Dr. Rakesh Kumar", designation: "Associate Professor (ME)", initials: "RK" },
+  { name: "Dr. Yogesh Verma", designation: "Assistant Professor (ME)", initials: "YV" },
+  { name: "Dr. Shilpa Singla", designation: "Assistant Professor (Civil)", initials: "SS" },
 ];
 
-const MemberAvatar = ({ initials, name }: { initials: string; name: string }) => (
-  <div className="flex items-center gap-3 py-2">
-    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center shrink-0">
+const MemberCard = ({ name, designation, initials }: { name: string; designation: string; initials: string }) => (
+  <div className="bg-card rounded-xl border border-border p-5 shadow-card hover:shadow-elevated transition-shadow text-center">
+    <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center mx-auto mb-3">
       <span className="text-secondary-foreground font-heading font-bold text-sm">{initials}</span>
     </div>
-    <span className="text-muted-foreground text-sm">{name}</span>
+    <h4 className="font-heading font-bold text-foreground text-sm">{name}</h4>
+    <p className="text-muted-foreground text-xs mt-1">{designation}</p>
   </div>
 );
 
@@ -78,7 +56,7 @@ const CommitteeSection = () => {
               className="bg-card rounded-2xl border border-border p-6 text-center shadow-card hover:shadow-elevated transition-shadow"
             >
               <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mx-auto mb-4">
-                <span className="text-secondary-foreground font-heading font-bold text-lg">{p.initials}</span>
+                <Crown className="text-accent" size={24} />
               </div>
               <p className="text-accent font-semibold text-xs tracking-widest uppercase">{p.role}</p>
               <h3 className="font-heading font-bold text-foreground mt-1">{p.name}</h3>
@@ -87,36 +65,30 @@ const CommitteeSection = () => {
           ))}
         </div>
 
-        {/* Track Teams */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {trackTeams.map((t, i) => (
-            <motion.div
-              key={t.track}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-card rounded-2xl border border-border p-6 shadow-card"
-            >
-              <div className="flex items-center gap-2 mb-4">
-                <Users className="text-accent" size={20} />
-                <h3 className="font-heading font-bold text-sm text-foreground">{t.track}</h3>
-              </div>
-              <div className="mb-4">
-                <p className="text-accent text-xs font-semibold uppercase tracking-wider mb-1">Organizing Secretaries</p>
-                {t.organizing.map((n) => (
-                  <MemberAvatar key={n.name} initials={n.initials} name={n.name} />
-                ))}
-              </div>
-              <div>
-                <p className="text-accent text-xs font-semibold uppercase tracking-wider mb-1">Joint Secretaries</p>
-                {t.joint.map((n) => (
-                  <MemberAvatar key={n.name} initials={n.initials} name={n.name} />
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        {/* Organizing Team */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-6"
+        >
+          <h3 className="font-heading font-bold text-xl text-foreground text-center mb-8 flex items-center justify-center gap-2">
+            <Users className="text-accent" size={22} /> Organizing Team
+          </h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {organizingTeam.map((m, i) => (
+              <motion.div
+                key={m.name}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+              >
+                <MemberCard name={m.name} designation={m.designation} initials={m.initials} />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

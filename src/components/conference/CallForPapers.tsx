@@ -43,7 +43,7 @@ const CallForPapers = () => {
             <div className="bg-card rounded-2xl border border-border overflow-hidden shadow-card">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="gradient-hero text-primary-foreground">
+                  <tr className="bg-secondary text-secondary-foreground">
                     <th className="text-left px-6 py-4 font-semibold">Event</th>
                     <th className="text-left px-6 py-4 font-semibold">Date</th>
                   </tr>

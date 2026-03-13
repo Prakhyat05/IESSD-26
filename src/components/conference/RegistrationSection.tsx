@@ -44,7 +44,7 @@ const RegistrationSection = () => {
             <div className="bg-card rounded-2xl border border-border overflow-hidden shadow-card">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="gradient-hero text-primary-foreground">
+                     <tr className="bg-secondary text-secondary-foreground">
                     <th className="text-left px-5 py-3 font-semibold">Category</th>
                     <th className="text-center px-5 py-3 font-semibold">Early Bird</th>
                     <th className="text-center px-5 py-3 font-semibold">Regular</th>
@@ -71,7 +71,7 @@ const RegistrationSection = () => {
             <div className="bg-card rounded-2xl border border-border overflow-hidden shadow-card">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="gradient-hero text-primary-foreground">
+                  <tr className="bg-secondary text-secondary-foreground">
                     <th className="text-left px-5 py-3 font-semibold">Category</th>
                     <th className="text-center px-5 py-3 font-semibold">Early Bird</th>
                     <th className="text-center px-5 py-3 font-semibold">Regular</th>
@@ -119,7 +119,7 @@ const RegistrationSection = () => {
             <ul className="space-y-3">
               {inclusions.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
-                  <span className="w-5 h-5 rounded-full gradient-accent flex items-center justify-center shrink-0 mt-0.5">
+                  <span className="w-5 h-5 rounded-full bg-accent flex items-center justify-center shrink-0 mt-0.5">
                     <CheckCircle size={12} className="text-primary-foreground" />
                   </span>
                   {item}

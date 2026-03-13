@@ -79,7 +79,7 @@ const TracksSection = () => {
               transition={{ duration: 0.5, delay: i * 0.15 }}
               className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border hover:shadow-elevated transition-shadow group"
             >
-              <div className="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center mb-5">
+              <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-5">
                 <track.icon size={24} className="text-primary-foreground" />
               </div>
               <p className="text-accent font-semibold text-xs tracking-widest uppercase">{track.title}</p>

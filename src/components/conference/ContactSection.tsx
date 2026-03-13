@@ -38,8 +38,8 @@ const ContactSection = () => {
               </div>
             </a>
             <div className="flex items-center gap-3 text-foreground">
-              <div className="w-12 h-12 rounded-full gradient-hero flex items-center justify-center">
-                <Phone size={20} className="text-emerald-glow" />
+              <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+                <Phone size={20} className="text-secondary-foreground" />
               </div>
               <div className="text-left">
                 <p className="text-xs text-muted-foreground">Phone</p>

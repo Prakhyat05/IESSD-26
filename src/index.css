@@ -6,47 +6,43 @@
 
 @layer base {
   :root {
-    --background: 210 30% 97%;
-    --foreground: 215 35% 10%;
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 35% 10%;
+    --card-foreground: 215 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 35% 10%;
+    --popover-foreground: 215 25% 15%;
 
-    --primary: 152 60% 28%;
+    --primary: 152 45% 30%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 215 50% 15%;
+    --secondary: 215 40% 18%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 150 15% 93%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 150 10% 94%;
+    --muted-foreground: 215 12% 50%;
 
-    --accent: 160 84% 39%;
+    --accent: 160 60% 35%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 150 15% 88%;
-    --input: 150 15% 88%;
-    --ring: 152 60% 28%;
+    --border: 150 10% 90%;
+    --input: 150 10% 90%;
+    --ring: 152 45% 30%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --navy: 215 55% 10%;
-    --navy-light: 215 45% 18%;
-    --emerald-glow: 160 84% 39%;
-    --emerald-dim: 152 60% 28%;
-    --surface-glass: 0 0% 100% / 0.7;
-    --gradient-hero: linear-gradient(135deg, hsl(215 55% 10%), hsl(215 45% 18%), hsl(152 40% 15%));
-    --gradient-accent: linear-gradient(135deg, hsl(152 60% 28%), hsl(160 84% 39%));
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(150 20% 97%));
-    --shadow-card: 0 4px 24px -4px hsl(215 55% 10% / 0.08);
-    --shadow-elevated: 0 12px 40px -8px hsl(215 55% 10% / 0.15);
+    --navy: 215 40% 12%;
+    --navy-light: 215 35% 20%;
+    --emerald-glow: 160 60% 35%;
+    --emerald-dim: 152 45% 30%;
+    --shadow-card: 0 2px 12px -2px hsl(215 40% 12% / 0.06);
+    --shadow-elevated: 0 8px 30px -6px hsl(215 40% 12% / 0.12);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -74,23 +70,6 @@
 }
 
 @layer utilities {
-  .glass {
-    @apply bg-white/70 backdrop-blur-xl border border-white/20;
-  }
-
-  .gradient-hero {
-    background: var(--gradient-hero);
-  }
-
-  .gradient-accent {
-    background: var(--gradient-accent);
-  }
-
-  .gradient-text {
-    @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-accent);
-  }
-
   .shadow-card {
     box-shadow: var(--shadow-card);
   }

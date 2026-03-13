@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { IndianRupee, Globe, CreditCard, CheckCircle, Home, Passport } from "lucide-react";
+import { IndianRupee, Globe, CreditCard, CheckCircle, Home, Globe2 } from "lucide-react";
 
 const indianPricing = [
   { category: "Student / Post Doc", attendee: "₹500", presenter: "₹1,000" },

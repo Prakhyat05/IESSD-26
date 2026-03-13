@@ -145,7 +145,7 @@ const RegistrationSection = () => {
 
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="bg-card rounded-2xl border border-border p-6 md:p-8 shadow-card">
               <h3 className="font-heading font-bold text-lg text-foreground mb-4 flex items-center gap-2">
-                <Passport className="text-accent" size={20} /> Visa Requirements
+                <Globe2 className="text-accent" size={20} /> Visa Requirements
               </h3>
               <p className="text-foreground text-sm leading-relaxed">
                 Overseas delegates who require an India Visa for participation are requested to contact the organizer in advance for guidance and an invitation letter.

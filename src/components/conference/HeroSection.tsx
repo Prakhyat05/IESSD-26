@@ -39,6 +39,29 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto text-center relative z-10 px-4 pt-20">
+        {/* Logos row */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex items-center justify-center gap-4 md:gap-8 mb-8 flex-wrap"
+        >
+          {[
+            { src: logoSliet, alt: "SLIET Logo" },
+            { src: logoIei, alt: "IEI Logo" },
+            { src: logoIessd, alt: "IESSD'26 Logo" },
+            { src: logoIce, alt: "ICE India Logo" },
+            { src: logoAtmanirbhar, alt: "Atmanirbhar Bharat" },
+          ].map((logo) => (
+            <img
+              key={logo.alt}
+              src={logo.src}
+              alt={logo.alt}
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain bg-white/90 rounded-lg p-1.5"
+            />
+          ))}
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

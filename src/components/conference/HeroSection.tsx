@@ -105,7 +105,7 @@ const HeroSection = () => {
           <Button asChild size="lg" className="bg-accent hover:bg-accent/90 border-0 text-accent-foreground font-semibold text-base px-8 shadow-lg">
             <a href="/registration">Register Now</a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-accent/40 text-primary-foreground hover:bg-accent/10 font-semibold text-base px-8">
+          <Button asChild size="lg" variant="outline" className="border-accent/40 text-accent-foreground hover:bg-accent/10 font-semibold text-base px-8">
             <a href="/call-for-papers">Submit Paper</a>
           </Button>
         </motion.div>

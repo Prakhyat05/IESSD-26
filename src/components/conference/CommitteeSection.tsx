@@ -14,13 +14,13 @@ import imgAmandeepShahi from "@/assets/committee/amandeep-shahi.jpeg";
 
 // Placeholder - replace with actual image imports when available
 // import imgSurinderSingh from "@/assets/committee/surinder-singh.jpeg";
-// import imgJagtarSingh from "@/assets/committee/jagtar-singh.jpeg";
-// import imgAnujBansal from "@/assets/committee/anuj-bansal.jpeg";
-// import imgJonnySingla from "@/assets/committee/jonny-singla.jpeg";
-// import imgDiveshBharti from "@/assets/committee/divesh-bharti.jpeg";
+import imgJagtarSingh from "@/assets/committee/jagtar-singh.jpeg";
+import imgAnujBansal from "@/assets/committee/anuj-bansal.jpeg";
+import imgJonnySingla from "@/assets/committee/jonny-singla.jpeg";
+import imgDiveshBharti from "@/assets/committee/divesh-bharti.jpeg";
 // import imgRKSaxena from "@/assets/committee/rk-saxena.jpeg";
-// import imgRakeshKumar from "@/assets/committee/rakesh-kumar.jpeg";
-// import imgYogeshVerma from "@/assets/committee/yogesh-verma.jpeg";
+import imgRakeshKumar from "@/assets/committee/rakesh-kumar.jpeg";
+import imgYogeshVerma from "@/assets/committee/yogesh-verma.jpeg";
 // import imgShilpaSingla from "@/assets/committee/shilpa-singla.jpeg";
 
 const leadership = [
@@ -28,7 +28,7 @@ const leadership = [
   { role: "Patron", name: "Prof. Surinder Singh", title: "Dean R&C, SLIET", photo: null as string | null, tier: 2 },
   { role: "Patron", name: "Prof. Amandeep Singh Shahi", title: "Dean Academics, SLIET", photo: imgAmandeepShahi, tier: 2 },
   { role: "Chairman", name: "Prof. Shankar Singh", title: "Head, Mechanical & Civil Engineering", photo: imgShankarSingh, tier: 2 },
-  { role: "Co-Chairman", name: "Prof. Jagtar Singh", title: "Department of Mechanical Engineering", photo: null as string | null, tier: 2 },
+  { role: "Co-Chairman", name: "Prof. Jagtar Singh", title: "Department of Mechanical Engineering", photo: imgJagtarSingh, tier: 2 },
 ];
 
 interface TrackData {
@@ -46,11 +46,11 @@ const tracks: TrackData[] = [
     icon: Cpu,
     organizingSecretaries: [
       { name: "Dr. Anil Kumar Singla", designation: "Associate Professor (ME)", photo: imgAnilSingla },
-      { name: "Dr. Anuj Bansal", designation: "Assistant Professor (ME)", photo: null },
+      { name: "Dr. Anuj Bansal", designation: "Assistant Professor (ME)", photo: imgAnujBansal },
     ],
     jointSecretaries: [
-      { name: "Er. Jonny Singla", designation: "Assistant Professor (ME)", photo: null },
-      { name: "Er. Divesh Bharti", designation: "Assistant Professor (ME)", photo: null },
+      { name: "Er. Jonny Singla", designation: "Assistant Professor (ME)", photo: imgJonnySingla },
+      { name: "Er. Divesh Bharti", designation: "Assistant Professor (ME)", photo: imgDiveshBharti },
     ],
   },
   {
@@ -75,8 +75,8 @@ const tracks: TrackData[] = [
       { name: "Dr. Sumit Kumar", designation: "Assistant Professor (CE)", photo: imgSumitKumar },
     ],
     jointSecretaries: [
-      { name: "Dr. Rakesh Kumar", designation: "Associate Professor (CE)", photo: null },
-      { name: "Dr. Yogesh Verma", designation: "Assistant Professor (CE)", photo: null },
+      { name: "Dr. Rakesh Kumar", designation: "Associate Professor (CE)", photo: imgRakeshKumar },
+      { name: "Dr. Yogesh Verma", designation: "Assistant Professor (CE)", photo: imgYogeshVerma },
       { name: "Dr. Shilpa Singla", designation: "Assistant Professor (CE)", photo: null },
     ],
   },

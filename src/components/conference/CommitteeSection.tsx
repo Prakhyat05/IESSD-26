@@ -7,7 +7,7 @@ import imgSumitKumar from "@/assets/committee/sumit-kumar.jpeg";
 import imgManiKantPaswan from "@/assets/committee/mani-kant-paswan.jpeg";
 import imgShankarSingh from "@/assets/committee/shankar-singh.jpeg";
 import imgSunilKumar from "@/assets/committee/sunil-kumar.jpeg";
-import imgVivekKumar from "@/assets/committee/vivek-kumar.jpeg";
+import imgVivekKumar from "@/assets/committee/vivek-kumar.jpg";
 import imgIndrajSingh from "@/assets/committee/indraj-singh.jpeg";
 import imgLalitAhuja from "@/assets/committee/lalit-ahuja.jpeg";
 import imgAmandeepShahi from "@/assets/committee/amandeep-shahi.jpeg";

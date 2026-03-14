@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Cog, Bot, Building2 } from "lucide-react";
+import { Cog, Bot, Building2, ArrowRight } from "lucide-react";
 
 const tracks = [
   {
@@ -50,16 +50,33 @@ const tracks = [
 
 const TracksSection = () => {
   return (
-    <section id="tracks" className="section-padding bg-muted/50">
-      <div className="container mx-auto max-w-6xl">
+    <section id="tracks" className="section-padding bg-muted/50 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{
+        backgroundImage: "linear-gradient(hsl(var(--accent)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--accent)) 1px, transparent 1px)",
+        backgroundSize: "60px 60px",
+      }} />
+
+      <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-accent font-heading font-semibold text-sm tracking-widest uppercase mb-2">Thematic Areas</p>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">Tracks of IESSD'26</h2>
+          <motion.div
+            className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-4 py-1.5 mb-4"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+          >
+            <Cog size={14} className="text-accent" />
+            <p className="text-accent font-heading font-semibold text-sm tracking-widest uppercase">Thematic Areas</p>
+          </motion.div>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground">
+            Tracks of IESSD<span className="text-accent">'26</span>
+          </h2>
+          <div className="w-20 h-1 bg-accent mx-auto mt-4 rounded-full" />
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -70,17 +87,20 @@ const TracksSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border hover:shadow-elevated transition-shadow group"
+              className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border hover:shadow-elevated transition-all duration-300 group relative overflow-hidden"
             >
-              <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-5">
-                <track.icon size={24} className="text-accent-foreground" />
+              {/* Top accent line */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-50 group-hover:opacity-100 transition-opacity" />
+
+              <div className="w-14 h-14 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5 group-hover:bg-accent group-hover:border-accent transition-all duration-300">
+                <track.icon size={26} className="text-accent group-hover:text-accent-foreground transition-colors duration-300" />
               </div>
               <p className="text-accent font-semibold text-xs tracking-widest uppercase">{track.title}</p>
-              <h3 className="font-heading font-bold text-lg text-foreground mt-1 mb-4">{track.name}</h3>
-              <ul className="space-y-2">
+              <h3 className="font-heading font-bold text-lg text-foreground mt-1 mb-5">{track.name}</h3>
+              <ul className="space-y-2.5">
                 {track.topics.map((t) => (
-                  <li key={t} className="text-muted-foreground text-sm flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 shrink-0" />
+                  <li key={t} className="text-foreground text-sm flex items-start gap-2.5 group/item">
+                    <ArrowRight size={14} className="text-accent mt-0.5 shrink-0 opacity-50 group-hover/item:opacity-100 transition-opacity" />
                     {t}
                   </li>
                 ))}

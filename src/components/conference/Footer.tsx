@@ -3,8 +3,14 @@ import logo from "@/assets/iessd-logo.jpeg";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary py-12 px-4">
-      <div className="container mx-auto max-w-6xl">
+    <footer className="bg-secondary py-12 px-4 relative overflow-hidden">
+      {/* Subtle grid */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{
+        backgroundImage: "linear-gradient(hsl(var(--accent)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--accent)) 1px, transparent 1px)",
+        backgroundSize: "60px 60px",
+      }} />
+
+      <div className="container mx-auto max-w-6xl relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <img src={logo} alt="IESSD'26" className="w-10 h-10 rounded-full object-cover" />
@@ -20,9 +26,10 @@ const Footer = () => {
               { label: "About", href: "/about" },
               { label: "Tracks", href: "/tracks" },
               { label: "Registration", href: "/registration" },
+              { label: "Committee", href: "/committee" },
               { label: "Contact", href: "/contact" },
             ].map((l) => (
-              <Link key={l.href} to={l.href} className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">
+              <Link key={l.href} to={l.href} className="text-secondary-foreground/80 hover:text-accent transition-colors">
                 {l.label}
               </Link>
             ))}

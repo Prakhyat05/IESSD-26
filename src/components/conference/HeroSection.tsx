@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { CalendarDays, MapPin, Monitor } from "lucide-react";
+import { CalendarDays, MapPin, Monitor, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/sliet-campus.webp";
 import logoSliet from "@/assets/logo-sliet.jpg";
@@ -38,6 +38,32 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-secondary/85" />
       </div>
 
+      {/* Animated grid overlay */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.04]" style={{
+        backgroundImage: "linear-gradient(hsl(var(--accent)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--accent)) 1px, transparent 1px)",
+        backgroundSize: "80px 80px",
+      }} />
+
+      {/* Floating orbs */}
+      <motion.div
+        className="absolute w-64 h-64 rounded-full bg-accent/10 blur-3xl pointer-events-none"
+        style={{ top: "20%", left: "10%" }}
+        animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute w-48 h-48 rounded-full bg-accent/8 blur-3xl pointer-events-none"
+        style={{ bottom: "20%", right: "15%" }}
+        animate={{ x: [0, -20, 0], y: [0, 15, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* Corner brackets */}
+      <div className="absolute top-24 left-8 w-12 h-12 border-t-2 border-l-2 border-accent/30 pointer-events-none" />
+      <div className="absolute top-24 right-8 w-12 h-12 border-t-2 border-r-2 border-accent/30 pointer-events-none" />
+      <div className="absolute bottom-8 left-8 w-12 h-12 border-b-2 border-l-2 border-accent/30 pointer-events-none" />
+      <div className="absolute bottom-8 right-8 w-12 h-12 border-b-2 border-r-2 border-accent/30 pointer-events-none" />
+
       <div className="container mx-auto text-center relative z-10 px-4 pt-20">
         {/* Logos row */}
         <motion.div
@@ -53,11 +79,13 @@ const HeroSection = () => {
             { src: logoIce, alt: "ICE India Logo" },
             { src: logoAtmanirbhar, alt: "Atmanirbhar Bharat" },
           ].map((logo) => (
-            <img
+            <motion.img
               key={logo.alt}
               src={logo.src}
               alt={logo.alt}
               className="h-16 md:h-20 lg:h-24 w-auto object-contain bg-white/90 rounded-lg p-1.5"
+              whileHover={{ scale: 1.08, y: -3 }}
+              transition={{ type: "spring", stiffness: 300 }}
             />
           ))}
         </motion.div>
@@ -72,7 +100,15 @@ const HeroSection = () => {
           </p>
           <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight max-w-5xl mx-auto">
             Innovative Engineering Solutions for{" "}
-            <span className="text-accent">Sustainable Development</span>
+            <span className="text-accent relative">
+              Sustainable Development
+              <motion.span
+                className="absolute -bottom-2 left-0 right-0 h-0.5 bg-accent/50"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ delay: 1, duration: 0.8 }}
+              />
+            </span>
           </h1>
           <p className="text-primary-foreground/60 font-heading text-2xl md:text-3xl font-bold mt-3">
             IESSD'26
@@ -85,15 +121,15 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="flex flex-wrap items-center justify-center gap-6 mt-8 text-primary-foreground/80"
         >
-          <span className="flex items-center gap-2 text-sm md:text-base">
-            <CalendarDays size={18} className="text-accent" /> 4th & 5th December 2026
-          </span>
-          <span className="flex items-center gap-2 text-sm md:text-base">
-            <Monitor size={18} className="text-accent" /> Hybrid Mode
-          </span>
-          <span className="flex items-center gap-2 text-sm md:text-base">
-            <MapPin size={18} className="text-accent" /> SLIET, Longowal, Punjab
-          </span>
+          {[
+            { icon: CalendarDays, text: "4th & 5th December 2026" },
+            { icon: Monitor, text: "Hybrid Mode" },
+            { icon: MapPin, text: "SLIET, Longowal, Punjab" },
+          ].map((item) => (
+            <span key={item.text} className="flex items-center gap-2 text-sm md:text-base bg-primary-foreground/5 border border-primary-foreground/10 rounded-full px-4 py-2">
+              <item.icon size={18} className="text-accent" /> {item.text}
+            </span>
+          ))}
         </motion.div>
 
         <motion.div
@@ -102,8 +138,11 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="flex flex-wrap justify-center gap-4 mt-10"
         >
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 border-0 text-accent-foreground font-semibold text-base px-8 shadow-lg">
-            <a href="/registration">Register Now</a>
+          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 border-0 text-accent-foreground font-semibold text-base px-8 shadow-lg group">
+            <a href="/registration">
+              Register Now
+              <motion.span className="ml-1 inline-block" animate={{ x: [0, 3, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>→</motion.span>
+            </a>
           </Button>
           <Button asChild size="lg" variant="outline" className="border-accent/40 text-accent hover:bg-accent/10 font-semibold text-base px-8">
             <a href="/call-for-papers">Submit Paper</a>
@@ -127,14 +166,24 @@ const HeroSection = () => {
               { val: timeLeft.minutes, label: "Min" },
               { val: timeLeft.seconds, label: "Sec" },
             ].map((t) => (
-              <div key={t.label} className="bg-secondary/60 backdrop-blur-sm rounded-xl px-4 py-3 md:px-6 md:py-4 min-w-[70px] md:min-w-[90px] border border-primary-foreground/10">
-                <div className="font-heading font-bold text-2xl md:text-4xl text-primary-foreground">
+              <div key={t.label} className="bg-secondary/60 backdrop-blur-sm rounded-xl px-4 py-3 md:px-6 md:py-4 min-w-[70px] md:min-w-[90px] border border-accent/20 relative overflow-hidden group">
+                <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="font-heading font-bold text-2xl md:text-4xl text-primary-foreground relative z-10">
                   {String(t.val).padStart(2, "0")}
                 </div>
-                <div className="text-primary-foreground/50 text-xs mt-1">{t.label}</div>
+                <div className="text-primary-foreground/50 text-xs mt-1 relative z-10">{t.label}</div>
               </div>
             ))}
           </div>
+        </motion.div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          className="mt-12"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <ChevronDown size={24} className="mx-auto text-primary-foreground/30" />
         </motion.div>
       </div>
     </section>

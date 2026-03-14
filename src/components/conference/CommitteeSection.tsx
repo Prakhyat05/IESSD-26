@@ -3,6 +3,8 @@ import { Crown, Users } from "lucide-react";
 
 const leadership = [
   { role: "Chief Patron", name: "Prof. Mani Kant Paswan", title: "Director, SLIET", initials: "MKP" },
+  { role: "Patron", name: "Prof. Surinder Singh", title: "Dean R&C, SLIET", initials: "SS" },
+  { role: "Patron", name: "Prof. Amandeep Singh Shahi", title: "Dean Academics, SLIET", initials: "ADSS" },
   { role: "Chairman", name: "Prof. Shankar Singh", title: "Head, Mechanical & Civil Engineering", initials: "SS" },
   { role: "Co-Chairman", name: "Prof. Jagtar Singh", title: "Department of Mechanical Engineering", initials: "JS" },
 ];

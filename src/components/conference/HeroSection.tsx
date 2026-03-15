@@ -9,6 +9,7 @@ import logoIessd from "@/assets/logo-iessd.png";
 import logoIce from "@/assets/logo-ice.jpeg";
 import logoAtmanirbhar from "@/assets/logo-atmanirbhar.png";
 
+const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfMWCNK4A-WriIz0HZ8iW8CFZTVhR7grSxkQmUJUqb_smHBcA/viewform";
 const targetDate = new Date("2026-06-30T23:59:59").getTime();
 
 /* Floating 3D-style geometric shapes */
@@ -74,7 +75,7 @@ const HeroSection = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="SLIET Campus" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-secondary/88" />
+        <div className="absolute inset-0 bg-secondary/92" />
       </div>
 
       {/* Grid overlay */}
@@ -141,13 +142,13 @@ const HeroSection = () => {
         transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
       />
 
-      <div className="container mx-auto text-center relative z-10 px-4 pt-20 pb-8">
+      <div className="container mx-auto text-center relative z-10 px-4 pt-24 pb-10">
         {/* Logos row */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex items-center justify-center gap-4 md:gap-8 mb-8 flex-wrap"
+          className="flex items-center justify-center gap-4 md:gap-8 mb-10 flex-wrap"
         >
           {[
             { src: logoSliet, alt: "SLIET Logo" },
@@ -172,26 +173,28 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="mb-8"
         >
-          <p className="text-accent font-heading font-semibold text-sm md:text-base tracking-widest uppercase mb-4">
+          <p className="text-accent font-heading font-bold text-base md:text-lg tracking-widest uppercase mb-5 drop-shadow-lg">
             International Conference on
           </p>
-          <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground leading-tight max-w-5xl mx-auto">
+          <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto drop-shadow-md" style={{ color: "white" }}>
             Innovative Engineering Solutions for{" "}
-            <span className="text-accent relative">
+            <span className="relative" style={{ color: "hsl(160, 90%, 50%)" }}>
               Sustainable Development
               <motion.span
-                className="absolute -bottom-2 left-0 right-0 h-0.5 bg-accent/50"
+                className="absolute -bottom-2 left-0 right-0 h-1 rounded-full"
+                style={{ background: "hsl(160, 90%, 50%)" }}
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ delay: 1, duration: 0.8 }}
               />
             </span>
           </h1>
-          <p className="text-primary-foreground/60 font-heading text-2xl md:text-3xl font-bold mt-3">
+          <p className="font-heading text-3xl md:text-4xl font-extrabold mt-5 tracking-wide drop-shadow-lg" style={{ color: "hsl(160, 80%, 55%)" }}>
             IESSD'26
           </p>
-          <p className="text-primary-foreground/50 text-sm mt-1">(Hybrid Mode)</p>
+          <p className="text-sm mt-2 font-medium tracking-wider" style={{ color: "hsl(0, 0%, 85%)" }}>(Hybrid Mode)</p>
         </motion.div>
 
         {/* Info pills */}
@@ -199,7 +202,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-8 text-primary-foreground/80"
+          className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-10"
         >
           {[
             { icon: CalendarDays, text: "4th & 5th December 2026" },
@@ -208,8 +211,13 @@ const HeroSection = () => {
           ].map((item) => (
             <motion.span
               key={item.text}
-              className="flex items-center gap-2 text-sm md:text-base bg-primary-foreground/5 border border-primary-foreground/10 rounded-full px-4 py-2 backdrop-blur-sm"
-              whileHover={{ scale: 1.05, borderColor: "hsl(var(--accent) / 0.3)" }}
+              className="flex items-center gap-2 text-sm md:text-base rounded-full px-5 py-2.5 backdrop-blur-md font-medium border"
+              style={{
+                color: "white",
+                background: "hsla(0, 0%, 100%, 0.08)",
+                borderColor: "hsla(160, 60%, 50%, 0.25)",
+              }}
+              whileHover={{ scale: 1.05, borderColor: "hsl(var(--accent) / 0.5)" }}
             >
               <item.icon size={18} className="text-accent" /> {item.text}
             </motion.span>
@@ -221,15 +229,15 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex flex-wrap justify-center gap-4 mt-10"
+          className="flex flex-wrap justify-center gap-5 mb-10"
         >
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 border-0 text-accent-foreground font-semibold text-base px-8 shadow-lg shadow-accent/20 group">
-            <a href="/registration">
+          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 border-0 text-accent-foreground font-bold text-base px-10 py-3 shadow-lg shadow-accent/30 group text-lg">
+            <a href={REGISTRATION_URL} target="_blank" rel="noopener noreferrer">
               Register Now
               <motion.span className="ml-1 inline-block" animate={{ x: [0, 3, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>→</motion.span>
             </a>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-accent/40 text-accent hover:bg-accent/10 font-semibold text-base px-8">
+          <Button asChild size="lg" variant="outline" className="border-accent/50 text-accent hover:bg-accent/10 font-bold text-base px-10 py-3 text-lg">
             <a href="/call-for-papers">Submit Paper</a>
           </Button>
         </motion.div>
@@ -239,19 +247,22 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-10"
+          className="mb-12"
         >
-          <div className="inline-flex items-center gap-2 bg-primary-foreground/5 border border-primary-foreground/10 backdrop-blur-sm rounded-xl px-6 py-4">
-            <Building2 size={20} className="text-accent shrink-0" />
+          <div className="inline-flex items-center gap-3 backdrop-blur-md rounded-2xl px-8 py-5 border" style={{
+            background: "hsla(0, 0%, 100%, 0.06)",
+            borderColor: "hsla(160, 60%, 50%, 0.2)",
+          }}>
+            <Building2 size={22} className="text-accent shrink-0" />
             <div className="text-left">
-              <p className="text-primary-foreground/40 text-[10px] uppercase tracking-widest">Organized by</p>
-              <p className="text-primary-foreground/90 text-sm md:text-base font-heading font-semibold">
+              <p className="text-[11px] uppercase tracking-[0.25em] font-semibold mb-1" style={{ color: "hsl(160, 70%, 55%)" }}>Organized by</p>
+              <p className="text-base md:text-lg font-heading font-bold" style={{ color: "white" }}>
                 Department of Mechanical Engineering & Civil Engineering
               </p>
-              <p className="text-primary-foreground/60 text-xs md:text-sm">
+              <p className="text-sm md:text-base mt-1" style={{ color: "hsl(0, 0%, 80%)" }}>
                 Sant Longowal Institute of Engineering & Technology, Longowal-148106, Sangrur, Punjab, India
               </p>
-              <p className="text-accent/70 text-[10px] italic mt-0.5">
+              <p className="text-xs italic mt-1" style={{ color: "hsl(160, 50%, 60%)" }}>
                 (Deemed-to-be-University under MoE, Govt. of India)
               </p>
             </div>
@@ -263,9 +274,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-12"
+          className="mb-10"
         >
-          <p className="text-primary-foreground/50 text-xs uppercase tracking-widest mb-4">
+          <p className="text-xs uppercase tracking-[0.2em] mb-5 font-semibold" style={{ color: "hsl(160, 60%, 55%)" }}>
             Abstract Submission Deadline
           </p>
           <div className="flex justify-center gap-3 md:gap-6">
@@ -277,17 +288,21 @@ const HeroSection = () => {
             ].map((t, i) => (
               <motion.div
                 key={t.label}
-                className="bg-secondary/60 backdrop-blur-sm rounded-xl px-4 py-3 md:px-6 md:py-4 min-w-[70px] md:min-w-[90px] border border-accent/20 relative overflow-hidden group"
+                className="backdrop-blur-md rounded-xl px-4 py-3 md:px-6 md:py-4 min-w-[70px] md:min-w-[90px] relative overflow-hidden group border"
+                style={{
+                  background: "hsla(215, 40%, 12%, 0.7)",
+                  borderColor: "hsla(160, 60%, 50%, 0.25)",
+                }}
                 whileHover={{ scale: 1.05, borderColor: "hsl(var(--accent) / 0.5)" }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 + i * 0.1, duration: 0.5 }}
               >
                 <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="font-heading font-bold text-2xl md:text-4xl text-primary-foreground relative z-10">
+                <div className="font-heading font-extrabold text-2xl md:text-4xl relative z-10" style={{ color: "white" }}>
                   {String(t.val).padStart(2, "0")}
                 </div>
-                <div className="text-primary-foreground/50 text-xs mt-1 relative z-10">{t.label}</div>
+                <div className="text-xs mt-1 relative z-10 font-medium" style={{ color: "hsl(160, 50%, 55%)" }}>{t.label}</div>
               </motion.div>
             ))}
           </div>
@@ -295,11 +310,11 @@ const HeroSection = () => {
 
         {/* Scroll indicator */}
         <motion.div
-          className="mt-10"
+          className="mt-6"
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <ChevronDown size={24} className="mx-auto text-primary-foreground/30" />
+          <ChevronDown size={24} className="mx-auto" style={{ color: "hsl(160, 50%, 55%)" }} />
         </motion.div>
       </div>
     </section>

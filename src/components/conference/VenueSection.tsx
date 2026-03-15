@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Plane, Train, Car, Camera, Navigation } from "lucide-react";
+import { MapPin, Plane, Train, Car, Camera, Navigation, Map } from "lucide-react";
 
 const attractions = [
   { name: "Chandigarh", desc: "The City Beautiful – ~140 km" },
@@ -99,6 +99,47 @@ const VenueSection = () => {
             </div>
           </motion.div>
         </div>
+
+        {/* Google Maps Embed */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16"
+        >
+          <h3 className="font-heading font-bold text-lg text-foreground mb-6 flex items-center gap-2 justify-center">
+            <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+              <Map className="text-accent" size={18} />
+            </div>
+            Find Us on the Map
+          </h3>
+          <div className="bg-card rounded-2xl border border-border overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3450.8!2d75.9388!3d30.0094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910a890e2e1ffff%3A0x5e5c6f7e7e7e7e7e!2sSant%20Longowal%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="SLIET Longowal Location"
+              className="w-full"
+            />
+            <div className="p-4 flex items-center justify-between bg-muted/30">
+              <p className="text-foreground text-sm font-medium">
+                SLIET, Longowal, Sangrur, Punjab - 148106
+              </p>
+              <a
+                href="https://maps.app.goo.gl/dDVRzV9m2oDAfKvr6?g_st=aw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent text-sm font-semibold hover:underline flex items-center gap-1"
+              >
+                Open in Google Maps <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -100,6 +100,13 @@ const RegistrationSection = () => {
             Registration & <span className="text-accent">Payment</span>
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto mt-4 rounded-full" />
+          <div className="mt-6">
+            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-base px-10 shadow-lg shadow-accent/30">
+              <a href={REGISTRATION_URL} target="_blank" rel="noopener noreferrer">
+                Register Now →
+              </a>
+            </Button>
+          </div>
         </motion.div>
 
         {/* Pricing Tables */}

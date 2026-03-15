@@ -2,13 +2,15 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import logoIessd from "@/assets/logo-iessd.png";
 
+const SPLASH_DURATION_MS = 6000; // 6 seconds total
+
 const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
   const [progress, setProgress] = useState(0);
   const [phase, setPhase] = useState<"loading" | "reveal" | "done">("loading");
   const audioRef = useRef<AudioContext | null>(null);
   const [audioStarted, setAudioStarted] = useState(false);
 
-  // Ambient melody using Web Audio API
+  // Extended ambient melody using Web Audio API
   const playMelody = () => {
     if (audioStarted) return;
     setAudioStarted(true);
@@ -16,102 +18,124 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
       const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
       audioRef.current = ctx;
 
-      const playNote = (freq: number, start: number, dur: number, vol = 0.08) => {
+      const playNote = (freq: number, start: number, dur: number, vol = 0.08, type: OscillatorType = "sine") => {
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
         const filter = ctx.createBiquadFilter();
-        
-        osc.type = "sine";
+
+        osc.type = type;
         osc.frequency.setValueAtTime(freq, ctx.currentTime + start);
-        
+
         filter.type = "lowpass";
         filter.frequency.setValueAtTime(2000, ctx.currentTime + start);
-        
+
         gain.gain.setValueAtTime(0, ctx.currentTime + start);
-        gain.gain.linearRampToValueAtTime(vol, ctx.currentTime + start + 0.1);
+        gain.gain.linearRampToValueAtTime(vol, ctx.currentTime + start + 0.15);
         gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + start + dur);
-        
+
         osc.connect(filter);
         filter.connect(gain);
         gain.connect(ctx.destination);
-        
+
         osc.start(ctx.currentTime + start);
         osc.stop(ctx.currentTime + start + dur);
       };
 
-      // Ethereal ascending melody - C major pentatonic with reverb feel
-      const notes = [
-        { freq: 523.25, start: 0, dur: 0.8 },    // C5
-        { freq: 659.25, start: 0.3, dur: 0.8 },   // E5
-        { freq: 783.99, start: 0.6, dur: 1.0 },   // G5
-        { freq: 880.00, start: 1.0, dur: 1.0 },   // A5
-        { freq: 1046.50, start: 1.4, dur: 1.2 },  // C6
-        { freq: 783.99, start: 1.8, dur: 0.8 },   // G5
-        { freq: 1174.66, start: 2.2, dur: 1.5 },  // D6
-        { freq: 1046.50, start: 2.6, dur: 1.5 },  // C6
+      // Extended ethereal melody — two phrases
+      const melody = [
+        // Phrase 1: Ascending C major pentatonic
+        { freq: 523.25, start: 0, dur: 1.0 },
+        { freq: 659.25, start: 0.4, dur: 1.0 },
+        { freq: 783.99, start: 0.8, dur: 1.2 },
+        { freq: 880.00, start: 1.3, dur: 1.2 },
+        { freq: 1046.50, start: 1.8, dur: 1.4 },
+        // Phrase 2: Descending with resolution
+        { freq: 987.77, start: 2.5, dur: 1.0 },
+        { freq: 880.00, start: 3.0, dur: 1.0 },
+        { freq: 783.99, start: 3.4, dur: 1.2 },
+        { freq: 659.25, start: 3.9, dur: 1.5 },
+        { freq: 523.25, start: 4.5, dur: 2.0 },
+        // Final shimmer
+        { freq: 1318.51, start: 5.0, dur: 1.5 },
+        { freq: 1046.50, start: 5.3, dur: 1.5 },
       ];
 
-      // Pad/drone layer
-      const padNotes = [
-        { freq: 261.63, start: 0, dur: 3.5, vol: 0.04 },   // C4
-        { freq: 329.63, start: 0.5, dur: 3.0, vol: 0.03 },  // E4
-        { freq: 392.00, start: 1.0, dur: 3.0, vol: 0.03 },  // G4
+      // Pad/drone layer — sustained chords
+      const pads = [
+        { freq: 130.81, start: 0, dur: 6.0, vol: 0.04 },
+        { freq: 196.00, start: 0.3, dur: 5.5, vol: 0.03 },
+        { freq: 261.63, start: 0.5, dur: 5.5, vol: 0.03 },
+        { freq: 329.63, start: 1.0, dur: 5.0, vol: 0.025 },
+        { freq: 392.00, start: 1.5, dur: 4.5, vol: 0.025 },
       ];
 
-      notes.forEach(n => playNote(n.freq, n.start, n.dur));
-      padNotes.forEach(n => playNote(n.freq, n.start, n.dur, n.vol));
+      // Subtle high harmonics
+      const harmonics = [
+        { freq: 2093.00, start: 1.0, dur: 0.8, vol: 0.015 },
+        { freq: 2637.02, start: 2.5, dur: 0.6, vol: 0.01 },
+        { freq: 2093.00, start: 4.0, dur: 1.0, vol: 0.015 },
+      ];
+
+      melody.forEach(n => playNote(n.freq, n.start, n.dur, 0.07));
+      pads.forEach(n => playNote(n.freq, n.start, n.dur, n.vol, "triangle"));
+      harmonics.forEach(n => playNote(n.freq, n.start, n.dur, n.vol));
     } catch (e) {
       console.log("Audio not available");
     }
   };
 
   useEffect(() => {
-    // Auto-start melody attempt
     playMelody();
 
+    const startTime = Date.now();
     const interval = setInterval(() => {
-      setProgress(p => {
-        if (p >= 100) {
-          clearInterval(interval);
-          return 100;
-        }
-        // Accelerating progress
-        const increment = p < 30 ? 2 : p < 60 ? 3 : p < 90 ? 4 : 2;
-        return Math.min(p + increment, 100);
-      });
-    }, 50);
+      const elapsed = Date.now() - startTime;
+      const pct = Math.min((elapsed / SPLASH_DURATION_MS) * 100, 100);
+      setProgress(Math.round(pct));
+      if (pct >= 100) clearInterval(interval);
+    }, 40);
 
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     if (progress >= 100 && phase === "loading") {
-      setTimeout(() => setPhase("reveal"), 300);
+      setTimeout(() => setPhase("reveal"), 400);
       setTimeout(() => {
         setPhase("done");
         onComplete();
-      }, 1200);
+      }, 1400);
     }
   }, [progress, phase, onComplete]);
 
   // Hex grid nodes
-  const nodes = Array.from({ length: 24 }, (_, i) => ({
+  const nodes = Array.from({ length: 30 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
     y: Math.random() * 100,
-    delay: Math.random() * 2,
+    delay: Math.random() * 3,
     size: 2 + Math.random() * 4,
   }));
 
   // Circuit lines
-  const circuits = Array.from({ length: 8 }, (_, i) => ({
+  const circuits = Array.from({ length: 12 }, (_, i) => ({
     id: i,
     x1: Math.random() * 100,
     y1: Math.random() * 100,
     x2: Math.random() * 100,
     y2: Math.random() * 100,
-    delay: Math.random() * 1.5,
+    delay: Math.random() * 2,
   }));
+
+  const statusMessages = [
+    "Initializing modules...",
+    "Loading conference data...",
+    "Connecting secure channels...",
+    "Preparing environment...",
+    "Finalizing portal...",
+    "Welcome to IESSD'26",
+  ];
+  const msgIndex = Math.min(Math.floor(progress / 20), statusMessages.length - 1);
 
   return (
     <AnimatePresence>
@@ -169,7 +193,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
                 initial={{ pathLength: 0, opacity: 0 }}
                 animate={{ pathLength: 1, opacity: [0, 0.3, 0.1] }}
                 transition={{
-                  duration: 2,
+                  duration: 2.5,
                   delay: c.delay,
                   repeat: Infinity,
                   ease: "easeInOut",
@@ -211,8 +235,25 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
             </svg>
           </motion.div>
 
+          {/* Third rotating ring */}
+          <motion.div
+            className="absolute"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+          >
+            <svg width="700" height="700" viewBox="0 0 700 700" className="opacity-[0.03]">
+              <polygon
+                points="350,30 630,190 630,510 350,670 70,510 70,190"
+                fill="none"
+                stroke="hsl(var(--accent))"
+                strokeWidth="0.5"
+                strokeDasharray="10 20"
+              />
+            </svg>
+          </motion.div>
+
           {/* Pulsing concentric circles */}
-          {[180, 220, 260].map((r, i) => (
+          {[180, 220, 260, 300].map((r, i) => (
             <motion.div
               key={r}
               className="absolute rounded-full border border-accent/10"
@@ -241,11 +282,11 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
             >
               <div className="absolute inset-0 rounded-full bg-accent/20 blur-2xl scale-150" />
               <motion.div
-                className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-accent/40 shadow-lg"
+                className="relative w-32 h-32 rounded-full overflow-hidden border-2 border-accent/40 shadow-lg"
                 animate={{
                   boxShadow: [
                     "0 0 20px hsl(var(--accent) / 0.2)",
-                    "0 0 40px hsl(var(--accent) / 0.4)",
+                    "0 0 50px hsl(var(--accent) / 0.4)",
                     "0 0 20px hsl(var(--accent) / 0.2)",
                   ],
                 }}
@@ -257,7 +298,8 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
 
             {/* Title */}
             <motion.h2
-              className="font-heading font-bold text-2xl md:text-3xl text-primary-foreground mb-2"
+              className="font-heading font-bold text-3xl md:text-4xl mb-2"
+              style={{ color: "white" }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
@@ -266,17 +308,27 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
             </motion.h2>
 
             <motion.p
-              className="text-accent text-xs tracking-[0.3em] uppercase mb-10"
+              className="text-accent text-xs tracking-[0.3em] uppercase mb-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
             >
-              Initializing Conference Portal
+              International Conference Portal
+            </motion.p>
+
+            <motion.p
+              className="text-xs mb-10 font-mono"
+              style={{ color: "hsl(0, 0%, 60%)" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.2 }}
+            >
+              4th & 5th December 2026 · SLIET, Longowal
             </motion.p>
 
             {/* Progress bar */}
             <motion.div
-              className="w-64 md:w-80 h-1 rounded-full overflow-hidden relative"
+              className="w-72 md:w-96 h-1.5 rounded-full overflow-hidden relative"
               style={{ background: "hsl(var(--secondary) / 0.5)" }}
               initial={{ opacity: 0, scaleX: 0 }}
               animate={{ opacity: 1, scaleX: 1 }}
@@ -302,34 +354,36 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
               />
             </motion.div>
 
-            {/* Progress percentage */}
+            {/* Status message */}
             <motion.p
-              className="text-primary-foreground/40 text-xs font-mono mt-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
+              className="text-xs font-mono mt-5"
+              style={{ color: "hsl(160, 50%, 55%)" }}
+              key={msgIndex}
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
             >
-              {progress}% — Loading modules...
+              [{String(progress).padStart(3, " ")}%] {statusMessages[msgIndex]}
             </motion.p>
 
-            {/* Scanning lines */}
+            {/* Sound wave visualizer */}
             <motion.div
               className="absolute -bottom-20 left-1/2 -translate-x-1/2 flex gap-1"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.4 }}
+              animate={{ opacity: 0.5 }}
               transition={{ delay: 1 }}
             >
-              {Array.from({ length: 20 }).map((_, i) => (
+              {Array.from({ length: 24 }).map((_, i) => (
                 <motion.div
                   key={i}
                   className="w-0.5 rounded-full"
                   style={{ background: "hsl(var(--accent))" }}
                   animate={{
-                    height: [4, 12 + Math.random() * 16, 4],
+                    height: [4, 14 + Math.random() * 20, 4],
                   }}
                   transition={{
-                    duration: 0.5 + Math.random() * 0.5,
-                    delay: i * 0.05,
+                    duration: 0.4 + Math.random() * 0.6,
+                    delay: i * 0.04,
                     repeat: Infinity,
                     ease: "easeInOut",
                   }}

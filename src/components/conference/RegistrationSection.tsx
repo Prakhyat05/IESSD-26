@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { IndianRupee, Globe, CreditCard, CheckCircle, Home, Globe2, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfMWCNK4A-WriIz0HZ8iW8CFZTVhR7grSxkQmUJUqb_smHBcA/viewform";
 
 const indianPricing = [
   { category: "Student / Post Doc", attendee: "₹500", presenter: "₹1,000" },

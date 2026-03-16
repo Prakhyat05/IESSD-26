@@ -268,9 +268,11 @@ const CommitteeSection = () => {
                 Joint Secretaries
                 <span className="w-8 h-px bg-accent/40" />
               </p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 max-w-3xl mx-auto">
+              <div className={`flex flex-wrap justify-center gap-5 max-w-3xl mx-auto`}>
                 {track.jointSecretaries.map((m) => (
-                  <MemberCard key={m.name} name={m.name} designation={m.designation} photo={m.photo} roleLabel="Joint Secretary" />
+                  <div key={m.name} className="w-[calc(50%-10px)] sm:w-[calc(33.333%-14px)]">
+                    <MemberCard name={m.name} designation={m.designation} photo={m.photo} roleLabel="Joint Secretary" />
+                  </div>
                 ))}
               </div>
             </div>

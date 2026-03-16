@@ -1,15 +1,24 @@
 import { motion } from "framer-motion";
 import { MapPin, Plane, Train, Car, Camera, Navigation, Map } from "lucide-react";
 
+import imgChandigarh from "@/assets/tourism/chandigarh.jpg";
+import imgAmritsar from "@/assets/tourism/amritsar.jpg";
+import imgShimla from "@/assets/tourism/shimla.jpg";
+import imgDelhi from "@/assets/tourism/delhi.jpg";
+import imgDharamsala from "@/assets/tourism/dharamsala.jpg";
+import imgManali from "@/assets/tourism/manali.jpg";
+import imgAgra from "@/assets/tourism/agra.jpg";
+import imgJaipur from "@/assets/tourism/jaipur.jpg";
+
 const attractions = [
-  { name: "Chandigarh", desc: "The City Beautiful – ~140 km" },
-  { name: "Amritsar", desc: "Golden Temple – ~205 km" },
-  { name: "Shimla", desc: "The Queen of the Hills – ~260 km" },
-  { name: "New Delhi", desc: "The National Capital – ~275 km" },
-  { name: "Dharamsala", desc: "Second winter capital of Himachal Pradesh – ~350 km" },
-  { name: "Manali", desc: "A gift of the Himalayas – ~410 km" },
-  { name: "Agra", desc: "The City of Taj Mahal – ~470 km" },
-  { name: "Jaipur", desc: "The Pink City – ~480 km" },
+  { name: "Chandigarh", desc: "The City Beautiful – ~140 km", img: imgChandigarh },
+  { name: "Amritsar", desc: "Golden Temple – ~205 km", img: imgAmritsar },
+  { name: "Shimla", desc: "The Queen of the Hills – ~260 km", img: imgShimla },
+  { name: "New Delhi", desc: "The National Capital – ~275 km", img: imgDelhi },
+  { name: "Dharamsala", desc: "Second winter capital of HP – ~350 km", img: imgDharamsala },
+  { name: "Manali", desc: "A gift of the Himalayas – ~410 km", img: imgManali },
+  { name: "Agra", desc: "The City of Taj Mahal – ~470 km", img: imgAgra },
+  { name: "Jaipur", desc: "The Pink City – ~480 km", img: imgJaipur },
 ];
 
 const VenueSection = () => {
@@ -89,11 +98,21 @@ const VenueSection = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05 }}
-                  whileHover={{ y: -3 }}
-                  className="bg-card rounded-xl border border-border p-4 shadow-card hover:shadow-elevated hover:border-accent/30 transition-all duration-300 group"
+                  whileHover={{ y: -5 }}
+                  className="bg-card rounded-xl border border-border shadow-card hover:shadow-elevated hover:border-accent/30 transition-all duration-300 group overflow-hidden"
                 >
-                  <h4 className="font-heading font-bold text-foreground text-sm group-hover:text-accent transition-colors">{a.name}</h4>
-                  <p className="text-foreground text-xs mt-1">{a.desc}</p>
+                  <div className="relative h-32 overflow-hidden">
+                    <img
+                      src={a.img}
+                      alt={a.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <h4 className="font-heading font-bold text-white text-sm drop-shadow-lg">{a.name}</h4>
+                      <p className="text-white/80 text-xs mt-0.5 drop-shadow">{a.desc}</p>
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -126,9 +145,12 @@ const VenueSection = () => {
               className="w-full"
             />
             <div className="p-4 flex items-center justify-between bg-muted/30">
-              <p className="text-foreground text-sm font-medium">
-                SLIET, Longowal, Sangrur, Punjab - 148106
-              </p>
+              <div className="flex items-center gap-2">
+                <MapPin size={16} className="text-accent" />
+                <p className="text-foreground text-sm font-medium">
+                  SLIET, Longowal, Sangrur, Punjab - 148106
+                </p>
+              </div>
               <a
                 href="https://maps.app.goo.gl/dDVRzV9m2oDAfKvr6?g_st=aw"
                 target="_blank"

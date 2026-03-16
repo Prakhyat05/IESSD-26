@@ -44,19 +44,23 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-2">
           {navLinks.map((l) => (
             <Link
               key={l.href}
               to={l.href}
-              className={`px-3 py-2 text-sm font-medium rounded-md transition-colors hover:bg-accent/10 ${
-                location.pathname === l.href ? "text-accent font-semibold" : textColor + "/90 hover:" + textColor
+              className={`px-4 py-2.5 text-[15px] font-semibold rounded-lg transition-all duration-200 hover:bg-accent/15 ${
+                location.pathname === l.href
+                  ? "text-accent bg-accent/10"
+                  : scrolled || !isHome
+                    ? "text-foreground/80 hover:text-foreground"
+                    : "text-emerald-100 hover:text-white"
               }`}
             >
               {l.label}
             </Link>
           ))}
-          <Button asChild className="ml-3 bg-accent hover:bg-accent/90 border-0 text-accent-foreground font-semibold shadow-card">
+          <Button asChild className="ml-4 bg-accent hover:bg-accent/90 border-0 text-accent-foreground font-semibold shadow-card text-[15px] px-5 py-2.5">
             <Link to="/registration">Register Now</Link>
           </Button>
         </nav>

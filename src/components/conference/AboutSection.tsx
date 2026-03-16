@@ -2,34 +2,12 @@ import { motion } from "framer-motion";
 import { BookOpen, GraduationCap, Globe, Cpu, Zap } from "lucide-react";
 import deptBuilding from "@/assets/dept-building.jpeg";
 import slietAdmin from "@/assets/sliet-admin.webp";
-
-const FloatingParticle = ({ delay, x, y, size }: { delay: number; x: string; y: string; size: number }) => (
-  <motion.div
-    className="absolute rounded-full bg-accent/20 pointer-events-none"
-    style={{ left: x, top: y, width: size, height: size }}
-    animate={{ y: [0, -20, 0], opacity: [0.3, 0.7, 0.3] }}
-    transition={{ duration: 4, delay, repeat: Infinity, ease: "easeInOut" }}
-  />
-);
-
-const GridOverlay = () => (
-  <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.03]">
-    <div className="absolute inset-0" style={{
-      backgroundImage: "linear-gradient(hsl(var(--accent)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--accent)) 1px, transparent 1px)",
-      backgroundSize: "60px 60px",
-    }} />
-  </div>
-);
+import TechBackground from "./TechBackground";
 
 const AboutSection = () => {
   return (
     <section id="about" className="section-padding bg-background relative overflow-hidden">
-      <GridOverlay />
-      <FloatingParticle delay={0} x="10%" y="20%" size={8} />
-      <FloatingParticle delay={1.5} x="85%" y="40%" size={6} />
-      <FloatingParticle delay={3} x="50%" y="70%" size={10} />
-      <FloatingParticle delay={0.8} x="25%" y="80%" size={5} />
-      <FloatingParticle delay={2.2} x="70%" y="15%" size={7} />
+      <TechBackground />
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div

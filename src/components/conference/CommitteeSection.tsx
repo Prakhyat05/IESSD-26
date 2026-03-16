@@ -186,7 +186,6 @@ const CommitteeSection = () => {
   return (
     <section className="section-padding bg-background relative overflow-hidden">
       <TechBackground />
-      }} />
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div

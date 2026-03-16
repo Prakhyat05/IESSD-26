@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Plane, Train, Car, Camera, Navigation, Map } from "lucide-react";
+import TechBackground from "./TechBackground";
 
 import imgChandigarh from "@/assets/tourism/chandigarh.jpg";
 import imgAmritsar from "@/assets/tourism/amritsar.jpg";

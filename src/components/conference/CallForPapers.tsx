@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FileText, Mail, BookOpen, Clock, ArrowRight } from "lucide-react";
+import TechBackground from "./TechBackground";
 
 const dates = [
   { event: "Extended Abstract Submission", date: "June 30, 2026", active: true },

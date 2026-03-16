@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Cog, Bot, Building2, ArrowRight } from "lucide-react";
+import TechBackground from "./TechBackground";
 
 const tracks = [
   {

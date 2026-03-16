@@ -11,10 +11,7 @@ const trackContacts = [
 const ContactSection = () => {
   return (
     <section id="contact" className="section-padding bg-background relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{
-        backgroundImage: "linear-gradient(hsl(var(--accent)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--accent)) 1px, transparent 1px)",
-        backgroundSize: "60px 60px",
-      }} />
+      <TechBackground variant="alt" />
 
       <div className="container mx-auto max-w-4xl relative z-10">
         <motion.div

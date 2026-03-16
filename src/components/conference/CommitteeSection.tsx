@@ -185,10 +185,7 @@ const CommitteeSection = () => {
 
   return (
     <section className="section-padding bg-background relative overflow-hidden">
-      {/* Background grid */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{
-        backgroundImage: "linear-gradient(hsl(var(--accent)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--accent)) 1px, transparent 1px)",
-        backgroundSize: "60px 60px",
+      <TechBackground />
       }} />
 
       <div className="container mx-auto max-w-6xl relative z-10">

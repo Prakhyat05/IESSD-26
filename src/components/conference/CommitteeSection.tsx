@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Crown, Users, Award, Shield, Cpu } from "lucide-react";
+import TechBackground from "./TechBackground";
 
 // Real photos
 import imgAnilSingla from "@/assets/committee/anil-singla.jpeg";

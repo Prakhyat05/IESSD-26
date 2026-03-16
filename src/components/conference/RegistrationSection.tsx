@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { IndianRupee, Globe, CreditCard, CheckCircle, Home, Globe2, Sparkles, QrCode } from "lucide-react";
+import TechBackground from "./TechBackground";
 import { Button } from "@/components/ui/button";
 import upiQrCode from "@/assets/upi-qr-code.jpeg";
 

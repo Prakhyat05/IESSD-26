@@ -75,7 +75,7 @@ const HeroSection = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="SLIET Campus" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-secondary/92" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, hsla(160, 40%, 10%, 0.92), hsla(200, 50%, 8%, 0.88), hsla(160, 30%, 12%, 0.90))" }} />
       </div>
 
       {/* Grid overlay */}

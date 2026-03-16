@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { IndianRupee, Globe, CreditCard, CheckCircle, Home, Globe2, Sparkles } from "lucide-react";
+import { IndianRupee, Globe, CreditCard, CheckCircle, Home, Globe2, Sparkles, QrCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import upiQrCode from "@/assets/upi-qr-code.jpeg";
 
 const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfMWCNK4A-WriIz0HZ8iW8CFZTVhR7grSxkQmUJUqb_smHBcA/viewform";
 
@@ -147,10 +148,23 @@ const RegistrationSection = () => {
                   <span className="text-foreground font-semibold font-mono text-xs sm:text-sm break-all">{value}</span>
                 </div>
               ))}
-            </div>
-          </motion.div>
+             </div>
+             {/* UPI QR Code */}
+             <div className="mt-6 pt-6 border-t border-border">
+               <h4 className="font-heading font-bold text-sm text-foreground mb-3 flex items-center gap-2">
+                 <QrCode size={16} className="text-accent" />
+                 Scan to Pay via UPI
+               </h4>
+               <div className="flex justify-center">
+                 <div className="bg-white rounded-xl p-3 shadow-card border border-border">
+                   <img src={upiQrCode} alt="UPI QR Code - IESSD 26" className="w-48 h-48 object-contain" />
+                 </div>
+               </div>
+               <p className="text-xs text-muted-foreground text-center mt-2">Name: IESSD 26 · UPI: 3105202603090000@cbin</p>
+             </div>
+           </motion.div>
 
-          <div className="space-y-8">
+           <div className="space-y-8">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="bg-card rounded-2xl border border-border p-6 md:p-8 shadow-card hover:shadow-elevated transition-all duration-300">
               <h3 className="font-heading font-bold text-lg text-foreground mb-4 flex items-center gap-2">
                 <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">

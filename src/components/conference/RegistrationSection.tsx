@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { IndianRupee, Globe, CreditCard, CheckCircle, Home, Globe2, Sparkles } from "lucide-react";
+import { IndianRupee, Globe, CreditCard, CheckCircle, Home, Globe2, Sparkles, QrCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import upiQrCode from "@/assets/upi-qr-code.jpeg";
 
 const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfMWCNK4A-WriIz0HZ8iW8CFZTVhR7grSxkQmUJUqb_smHBcA/viewform";
 

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, Send, MessageCircle } from "lucide-react";
+import TechBackground from "./TechBackground";
 
 const trackContacts = [
   { track: "Track 1", email: "iessd26-T1@sliet.ac.in", phone: "+91 9781403550" },

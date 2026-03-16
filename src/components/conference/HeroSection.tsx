@@ -180,15 +180,8 @@ const HeroSection = () => {
           </p>
           <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight max-w-5xl mx-auto drop-shadow-md" style={{ color: "white" }}>
             Innovative Engineering Solutions for{" "}
-            <span className="relative" style={{ color: "hsl(160, 90%, 50%)" }}>
+            <span className="relative" style={{ color: "white" }}>
               Sustainable Development
-              <motion.span
-                className="absolute -bottom-2 left-0 right-0 h-1 rounded-full"
-                style={{ background: "hsl(160, 90%, 50%)" }}
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ delay: 1, duration: 0.8 }}
-              />
             </span>
           </h1>
           <p className="font-heading text-3xl md:text-4xl font-extrabold mt-5 tracking-wide drop-shadow-lg" style={{ color: "hsl(160, 80%, 55%)" }}>

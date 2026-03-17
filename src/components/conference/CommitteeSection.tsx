@@ -186,9 +186,6 @@ const MemberCard = ({ name, designation, photo, roleLabel }: { name: string; des
 );
 
 const CommitteeSection = () => {
-  const chiefPatron = leadership[0];
-  const otherLeaders = leadership.slice(1);
-
   return (
     <section className="section-padding bg-background relative overflow-hidden">
       <TechBackground />
@@ -215,12 +212,19 @@ const CommitteeSection = () => {
           <div className="w-20 h-1 bg-accent mx-auto mt-4 rounded-full" />
         </motion.div>
 
-        {/* Chief Patron — full width hero */}
-        <ChiefPatronCard member={chiefPatron} />
+        {/* Row 1: Chief Patron */}
+        <ChiefPatronCard member={chiefPatronData} />
 
-        {/* Patrons & Chairman row */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {otherLeaders.map((p, i) => (
+        {/* Row 2: Patrons */}
+        <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-10">
+          {patrons.map((p, i) => (
+            <LeaderCard key={p.name + p.role} member={p} index={i} />
+          ))}
+        </div>
+
+        {/* Row 3: Chairman & Co-Chairman */}
+        <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-20">
+          {chairmen.map((p, i) => (
             <LeaderCard key={p.name + p.role} member={p} index={i} />
           ))}
         </div>

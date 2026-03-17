@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { FileText, Mail, BookOpen, Clock, ArrowRight } from "lucide-react";
+import { FileText, Mail, BookOpen, Clock, ArrowRight, CheckCircle, Send, Edit, Search, Award } from "lucide-react";
 import TechBackground from "./TechBackground";
+import conferenceHall from "@/assets/conference-hall.jpg";
 
 const dates = [
   { event: "Extended Abstract Submission", date: "June 30, 2026", active: true },
@@ -14,6 +15,15 @@ const trackEmails = [
   { track: "Track 1 – Innovations in Smart Manufacturing", email: "iessd26-T1@sliet.ac.in" },
   { track: "Track 2 – Intelligent Robotics & Automation", email: "iessd26-T2@sliet.ac.in" },
   { track: "Track 3 – Sustainability in Civil Engineering", email: "iessd26-T3@sliet.ac.in" },
+];
+
+const flowSteps = [
+  { icon: Edit, title: "Prepare Abstract", desc: "Write your extended abstract following the conference template and guidelines" },
+  { icon: Send, title: "Submit via Email", desc: "Email your manuscript (PDF) to the respective track email address" },
+  { icon: Search, title: "Peer Review", desc: "Your paper undergoes rigorous peer review by the technical committee" },
+  { icon: CheckCircle, title: "Acceptance", desc: "Receive notification of acceptance with reviewer feedback" },
+  { icon: FileText, title: "Submit Full Paper", desc: "Revise and submit the full-length paper incorporating reviewer comments" },
+  { icon: Award, title: "Present & Publish", desc: "Present at IESSD'26 and get published in reputed journals" },
 ];
 
 const CallForPapers = () => {
@@ -41,6 +51,69 @@ const CallForPapers = () => {
             Call for <span className="text-accent">Papers</span>
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto mt-4 rounded-full" />
+        </motion.div>
+
+        {/* Conference Hall Image Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-14 rounded-2xl overflow-hidden border border-border shadow-card relative"
+        >
+          <div className="relative h-64 md:h-80">
+            <img src={conferenceHall} alt="Conference presentation hall" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-r from-secondary/80 via-secondary/50 to-transparent" />
+            <div className="absolute inset-0 flex items-center p-8 md:p-12">
+              <div>
+                <h3 className="font-heading font-bold text-2xl md:text-3xl text-secondary-foreground mb-2">Share Your Research</h3>
+                <p className="text-secondary-foreground/80 text-sm md:text-base max-w-md">
+                  Present your innovative findings at IESSD'26 and contribute to the future of engineering and sustainable development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Submission Process Flowchart */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-14"
+        >
+          <h3 className="font-heading font-bold text-xl text-foreground mb-8 text-center">
+            Submission <span className="text-accent">Process</span>
+          </h3>
+          <div className="relative">
+            {/* Connecting line */}
+            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-accent/20 via-accent to-accent/20 -translate-y-1/2 z-0" />
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-3 relative z-10">
+              {flowSteps.map((step, i) => (
+                <motion.div
+                  key={step.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="flex flex-col items-center text-center group"
+                >
+                  {/* Step number + icon */}
+                  <div className="relative mb-3">
+                    <div className="w-16 h-16 rounded-2xl bg-card border-2 border-accent/30 flex items-center justify-center shadow-card group-hover:border-accent group-hover:shadow-elevated transition-all duration-300">
+                      <step.icon size={24} className="text-accent" />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-accent text-accent-foreground text-xs font-bold flex items-center justify-center">
+                      {i + 1}
+                    </div>
+                  </div>
+                  {/* Arrow between steps (mobile) */}
+                  <h4 className="font-heading font-bold text-foreground text-sm mb-1">{step.title}</h4>
+                  <p className="text-muted-foreground text-xs leading-relaxed">{step.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -71,7 +144,7 @@ const CallForPapers = () => {
                   </div>
                   <div className={`pb-6 ${i === dates.length - 1 ? 'pb-0' : ''}`}>
                     <p className="text-foreground font-medium text-sm">{d.event}</p>
-                    <p className={`text-sm mt-0.5 font-semibold ${d.highlight ? 'text-accent' : 'text-accent'}`}>{d.date}</p>
+                    <p className={`text-sm mt-0.5 font-semibold text-accent`}>{d.date}</p>
                   </div>
                 </motion.div>
               ))}

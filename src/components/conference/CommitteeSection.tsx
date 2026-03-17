@@ -92,8 +92,10 @@ const getInitials = (name: string) => {
   return parts.map(p => p[0]).join("").toUpperCase();
 };
 
+type LeaderMember = { role: string; name: string; title: string; photo: string; tier: number };
+
 // Chief Patron — hero card
-const ChiefPatronCard = ({ member }: { member: typeof leadership[0] }) => (
+const ChiefPatronCard = ({ member }: { member: LeaderMember }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}

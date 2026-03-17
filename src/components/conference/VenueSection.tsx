@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Plane, Train, Car, Camera, Navigation, Map } from "lucide-react";
 import TechBackground from "./TechBackground";
+import slietCampus from "@/assets/sliet-campus.webp";
 
 import imgChandigarh from "@/assets/tourism/chandigarh.jpg";
 import imgAmritsar from "@/assets/tourism/amritsar.jpg";
@@ -12,14 +13,54 @@ import imgAgra from "@/assets/tourism/agra.jpg";
 import imgJaipur from "@/assets/tourism/jaipur.jpg";
 
 const attractions = [
-  { name: "Chandigarh", desc: "The City Beautiful – ~140 km", img: imgChandigarh },
-  { name: "Amritsar", desc: "Golden Temple – ~205 km", img: imgAmritsar },
-  { name: "Shimla", desc: "The Queen of the Hills – ~260 km", img: imgShimla },
-  { name: "New Delhi", desc: "The National Capital – ~275 km", img: imgDelhi },
-  { name: "Dharamsala", desc: "Second winter capital of HP – ~350 km", img: imgDharamsala },
-  { name: "Manali", desc: "A gift of the Himalayas – ~410 km", img: imgManali },
-  { name: "Agra", desc: "The City of Taj Mahal – ~470 km", img: imgAgra },
-  { name: "Jaipur", desc: "The Pink City – ~480 km", img: imgJaipur },
+  {
+    name: "Chandigarh",
+    distance: "~140 km",
+    img: imgChandigarh,
+    desc: "India's first planned city, known for its modernist architecture by Le Corbusier. Visit the famous Rock Garden, Sukhna Lake, and the Rose Garden – Asia's largest.",
+  },
+  {
+    name: "Amritsar",
+    distance: "~205 km",
+    img: imgAmritsar,
+    desc: "Home to the iconic Golden Temple (Sri Harmandir Sahib), a spiritual and architectural marvel. Don't miss the Jallianwala Bagh and the Wagah Border ceremony.",
+  },
+  {
+    name: "Shimla",
+    distance: "~260 km",
+    img: imgShimla,
+    desc: "The Queen of Hills and former summer capital of British India. Enjoy the Mall Road, Jakhoo Temple, and scenic toy train ride through the Himalayan foothills.",
+  },
+  {
+    name: "New Delhi",
+    distance: "~275 km",
+    img: imgDelhi,
+    desc: "India's vibrant capital blending Mughal heritage with modern culture. Explore India Gate, Red Fort, Qutub Minar, Lotus Temple, and bustling Chandni Chowk.",
+  },
+  {
+    name: "Dharamsala",
+    distance: "~350 km",
+    img: imgDharamsala,
+    desc: "The Tibetan government-in-exile's home, nestled in the Kangra Valley. Visit McLeod Ganj, Bhagsu Waterfall, and the Dalai Lama Temple Complex.",
+  },
+  {
+    name: "Manali",
+    distance: "~410 km",
+    img: imgManali,
+    desc: "A Himalayan paradise for adventure lovers. Experience Solang Valley, Rohtang Pass, Hadimba Temple, and Old Manali's charming cafes and culture.",
+  },
+  {
+    name: "Agra",
+    distance: "~470 km",
+    img: imgAgra,
+    desc: "Home to the Taj Mahal, one of the Seven Wonders of the World. Also visit Agra Fort, Fatehpur Sikri, and Mehtab Bagh for a sunset view of the Taj.",
+  },
+  {
+    name: "Jaipur",
+    distance: "~480 km",
+    img: imgJaipur,
+    desc: "The Pink City of Rajasthan, famous for Hawa Mahal, Amber Fort, City Palace, and Jantar Mantar. A vibrant mix of royal heritage and colorful bazaars.",
+  },
 ];
 
 const VenueSection = () => {
@@ -49,7 +90,26 @@ const VenueSection = () => {
           <div className="w-20 h-1 bg-accent mx-auto mt-4 rounded-full" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        {/* Campus Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-14 rounded-2xl overflow-hidden border border-border shadow-card relative"
+        >
+          <div className="relative h-64 md:h-80">
+            <img src={slietCampus} alt="SLIET Campus" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/40 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+              <h3 className="font-heading font-bold text-2xl md:text-3xl text-secondary-foreground mb-2">SLIET, Longowal</h3>
+              <p className="text-secondary-foreground/80 text-sm md:text-base max-w-lg">
+                A 447-acre campus of engineering excellence in the heart of Punjab, India
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-12 mb-14">
           {/* Venue Info */}
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <div className="bg-card rounded-2xl border border-border p-6 md:p-8 shadow-card space-y-6 hover:shadow-elevated transition-all duration-300 relative overflow-hidden">
@@ -80,84 +140,92 @@ const VenueSection = () => {
             </div>
           </motion.div>
 
-          {/* Tourism */}
+          {/* Google Maps */}
           <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <h3 className="font-heading font-bold text-lg text-foreground mb-4 flex items-center gap-2">
               <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
-                <Camera className="text-accent" size={18} />
+                <Map className="text-accent" size={18} />
               </div>
-              Tourism Near the Venue
+              Find Us on the Map
             </h3>
-            <div className="grid grid-cols-2 gap-4">
-              {attractions.map((a, i) => (
-                <motion.div
-                  key={a.name}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05 }}
-                  whileHover={{ y: -5 }}
-                  className="bg-card rounded-xl border border-border shadow-card hover:shadow-elevated hover:border-accent/30 transition-all duration-300 group overflow-hidden"
+            <div className="bg-card rounded-2xl border border-border overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3450.8!2d75.9388!3d30.0094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910a890e2e1ffff%3A0x5e5c6f7e7e7e7e7e!2sSant%20Longowal%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                width="100%"
+                height="340"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="SLIET Longowal Location"
+                className="w-full"
+              />
+              <div className="p-4 flex items-center justify-between bg-muted/30">
+                <div className="flex items-center gap-2">
+                  <MapPin size={16} className="text-accent" />
+                  <p className="text-foreground text-sm font-medium">SLIET, Longowal, Sangrur, Punjab - 148106</p>
+                </div>
+                <a
+                  href="https://maps.app.goo.gl/dDVRzV9m2oDAfKvr6?g_st=aw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent text-sm font-semibold hover:underline flex items-center gap-1"
                 >
-                  <div className="relative h-32 overflow-hidden">
-                    <img
-                      src={a.img}
-                      alt={a.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-3">
-                      <h4 className="font-heading font-bold text-white text-sm drop-shadow-lg">{a.name}</h4>
-                      <p className="text-white/80 text-xs mt-0.5 drop-shadow">{a.desc}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+                  Open in Maps <span>↗</span>
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>
 
-        {/* Google Maps Embed */}
+        {/* Tourism Section - Bigger Images with Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16"
         >
-          <h3 className="font-heading font-bold text-lg text-foreground mb-6 flex items-center gap-2 justify-center">
-            <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
-              <Map className="text-accent" size={18} />
+          <h3 className="font-heading font-bold text-2xl text-foreground mb-2 flex items-center gap-3 justify-center">
+            <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+              <Camera className="text-accent" size={22} />
             </div>
-            Find Us on the Map
+            Explore Nearby Destinations
           </h3>
-          <div className="bg-card rounded-2xl border border-border overflow-hidden shadow-card hover:shadow-elevated transition-all duration-300">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3450.8!2d75.9388!3d30.0094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910a890e2e1ffff%3A0x5e5c6f7e7e7e7e7e!2sSant%20Longowal%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="SLIET Longowal Location"
-              className="w-full"
-            />
-            <div className="p-4 flex items-center justify-between bg-muted/30">
-              <div className="flex items-center gap-2">
-                <MapPin size={16} className="text-accent" />
-                <p className="text-foreground text-sm font-medium">
-                  SLIET, Longowal, Sangrur, Punjab - 148106
-                </p>
-              </div>
-              <a
-                href="https://maps.app.goo.gl/dDVRzV9m2oDAfKvr6?g_st=aw"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent text-sm font-semibold hover:underline flex items-center gap-1"
+          <p className="text-muted-foreground text-center text-sm mb-8 max-w-2xl mx-auto">
+            Punjab and North India offer a rich tapestry of culture, history, and natural beauty. Here are some must-visit destinations near the conference venue.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {attractions.map((a, i) => (
+              <motion.div
+                key={a.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                whileHover={{ y: -5 }}
+                className="bg-card rounded-2xl border border-border shadow-card hover:shadow-elevated hover:border-accent/30 transition-all duration-300 group overflow-hidden"
               >
-                Open in Google Maps <span>↗</span>
-              </a>
-            </div>
+                <div className="relative h-52 md:h-60 overflow-hidden">
+                  <img
+                    src={a.img}
+                    alt={a.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute top-3 right-3">
+                    <span className="bg-accent/90 text-accent-foreground text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+                      {a.distance}
+                    </span>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <h4 className="font-heading font-bold text-white text-lg drop-shadow-lg">{a.name}</h4>
+                  </div>
+                </div>
+                <div className="p-5">
+                  <p className="text-foreground text-sm leading-relaxed">{a.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>

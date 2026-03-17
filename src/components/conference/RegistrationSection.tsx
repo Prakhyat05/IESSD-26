@@ -142,8 +142,8 @@ const RegistrationSection = () => {
             <div className="space-y-2 text-sm">
               {bankDetails.map(([label, value]) => (
                 <div key={label} className="flex flex-col sm:flex-row sm:justify-between bg-muted/50 rounded-lg px-4 py-3 gap-1 hover:bg-muted/80 transition-colors">
-                  <span className="text-foreground text-xs uppercase tracking-wide">{label}</span>
-                  <span className="text-foreground font-semibold font-mono text-xs sm:text-sm break-all">{value}</span>
+                  <span className="text-foreground text-xs uppercase tracking-wide font-heading">{label}</span>
+                  <span className="text-foreground font-bold text-xs sm:text-sm break-all" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{value}</span>
                 </div>
               ))}
              </div>

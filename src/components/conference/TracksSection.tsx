@@ -1,12 +1,16 @@
 import { motion } from "framer-motion";
 import { Cog, Bot, Building2, ArrowRight } from "lucide-react";
 import TechBackground from "./TechBackground";
+import trackManufacturing from "@/assets/track-manufacturing.jpg";
+import trackRobotics from "@/assets/track-robotics.jpg";
+import trackCivil from "@/assets/track-civil.jpg";
 
 const tracks = [
   {
     icon: Cog,
     title: "Track 1",
     name: "Innovations in Smart Manufacturing",
+    img: trackManufacturing,
     topics: [
       "Smart Materials and their Manufacturing",
       "Material Recycling and Characterization",
@@ -24,6 +28,7 @@ const tracks = [
     icon: Bot,
     title: "Track 2",
     name: "Intelligent Robotics & Automation for Sustainable Systems",
+    img: trackRobotics,
     topics: [
       "Intelligent Automation in Manufacturing System",
       "Autonomous Robots & Robotic Systems",
@@ -41,6 +46,7 @@ const tracks = [
     icon: Building2,
     title: "Track 3",
     name: "Sustainability in Civil Engineering",
+    img: trackCivil,
     topics: [
       "Sustainable Construction Materials",
       "Smart Construction Techniques",
@@ -91,24 +97,31 @@ const TracksSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border hover:shadow-elevated transition-all duration-300 group relative overflow-hidden"
+              className="bg-card rounded-2xl shadow-card border border-border hover:shadow-elevated transition-all duration-300 group relative overflow-hidden"
             >
-              {/* Top accent line */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent to-transparent opacity-50 group-hover:opacity-100 transition-opacity" />
-
-              <div className="w-14 h-14 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-5 group-hover:bg-accent group-hover:border-accent transition-all duration-300">
-                <track.icon size={26} className="text-accent group-hover:text-accent-foreground transition-colors duration-300" />
+              {/* Track Image */}
+              <div className="relative h-48 overflow-hidden">
+                <img src={track.img} alt={track.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+                <div className="absolute bottom-3 left-4">
+                  <div className="w-12 h-12 rounded-xl bg-accent/90 border border-accent flex items-center justify-center shadow-lg">
+                    <track.icon size={24} className="text-accent-foreground" />
+                  </div>
+                </div>
               </div>
-              <p className="text-accent font-semibold text-xs tracking-widest uppercase">{track.title}</p>
-              <h3 className="font-heading font-bold text-lg text-foreground mt-1 mb-5">{track.name}</h3>
-              <ul className="space-y-2.5">
-                {track.topics.map((t) => (
-                  <li key={t} className="text-foreground text-sm flex items-start gap-2.5 group/item">
-                    <ArrowRight size={14} className="text-accent mt-0.5 shrink-0 opacity-50 group-hover/item:opacity-100 transition-opacity" />
-                    {t}
-                  </li>
-                ))}
-              </ul>
+
+              <div className="p-6 md:p-8 pt-4">
+                <p className="text-accent font-semibold text-xs tracking-widest uppercase">{track.title}</p>
+                <h3 className="font-heading font-bold text-lg text-foreground mt-1 mb-5">{track.name}</h3>
+                <ul className="space-y-2.5">
+                  {track.topics.map((t) => (
+                    <li key={t} className="text-foreground text-sm flex items-start gap-2.5 group/item">
+                      <ArrowRight size={14} className="text-accent mt-0.5 shrink-0 opacity-50 group-hover/item:opacity-100 transition-opacity" />
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           ))}
         </div>

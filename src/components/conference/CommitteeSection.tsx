@@ -14,7 +14,7 @@ import imgLalitAhuja from "@/assets/committee/lalit-ahuja.jpeg";
 import imgAmandeepShahi from "@/assets/committee/amandeep-shahi.jpeg";
 
 // Placeholder - replace with actual image imports when available
-import imgSurinderSingh from "@/assets/committee/surinder-singh.jpeg";
+import imgSurinderSingh from "@/assets/committee/surinder-singh.png";
 import imgJagtarSingh from "@/assets/committee/jagtar-singh.jpeg";
 import imgAnujBansal from "@/assets/committee/anuj-bansal.jpeg";
 import imgJonnySingla from "@/assets/committee/jonny-singla.jpeg";

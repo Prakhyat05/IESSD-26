@@ -24,12 +24,16 @@ import imgRakeshKumar from "@/assets/committee/rakesh-kumar.jpeg";
 import imgYogeshVerma from "@/assets/committee/yogesh-verma.jpeg";
 import imgShilpaSingla from "@/assets/committee/shilpa-singla.jpeg";
 
-const leadership = [
-  { role: "Chief Patron", name: "Prof. Mani Kant Paswan", title: "Director, SLIET", photo: imgManiKantPaswan, tier: 1 },
-  { role: "Patron", name: "Prof. Surinder Singh", title: "Dean R&C, SLIET", photo: imgSurinderSingh, tier: 2 },
+const chiefPatronData = { role: "Chief Patron", name: "Prof. Mani Kant Paswan", title: "Director, SLIET", photo: imgManiKantPaswan, tier: 1 };
+
+const patrons = [
   { role: "Patron", name: "Prof. Amandeep Singh Shahi", title: "Dean Academics, SLIET", photo: imgAmandeepShahi, tier: 2 },
-  { role: "Chairman", name: "Prof. Shankar Singh", title: "Head, Mechanical & Civil Engineering", photo: imgShankarSingh, tier: 2 },
+  { role: "Patron", name: "Prof. Surinder Singh", title: "Dean R&C, SLIET", photo: imgSurinderSingh, tier: 2 },
+];
+
+const chairmen = [
   { role: "Co-Chairman", name: "Prof. Jagtar Singh", title: "Department of Mechanical Engineering", photo: imgJagtarSingh, tier: 2 },
+  { role: "Chairman", name: "Prof. Shankar Singh", title: "Head, Mechanical & Civil Engineering", photo: imgShankarSingh, tier: 2 },
 ];
 
 interface TrackData {

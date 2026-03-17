@@ -24,12 +24,16 @@ import imgRakeshKumar from "@/assets/committee/rakesh-kumar.jpeg";
 import imgYogeshVerma from "@/assets/committee/yogesh-verma.jpeg";
 import imgShilpaSingla from "@/assets/committee/shilpa-singla.jpeg";
 
-const leadership = [
-  { role: "Chief Patron", name: "Prof. Mani Kant Paswan", title: "Director, SLIET", photo: imgManiKantPaswan, tier: 1 },
-  { role: "Patron", name: "Prof. Surinder Singh", title: "Dean R&C, SLIET", photo: imgSurinderSingh, tier: 2 },
+const chiefPatronData = { role: "Chief Patron", name: "Prof. Mani Kant Paswan", title: "Director, SLIET", photo: imgManiKantPaswan, tier: 1 };
+
+const patrons = [
   { role: "Patron", name: "Prof. Amandeep Singh Shahi", title: "Dean Academics, SLIET", photo: imgAmandeepShahi, tier: 2 },
-  { role: "Chairman", name: "Prof. Shankar Singh", title: "Head, Mechanical & Civil Engineering", photo: imgShankarSingh, tier: 2 },
+  { role: "Patron", name: "Prof. Surinder Singh", title: "Dean R&C, SLIET", photo: imgSurinderSingh, tier: 2 },
+];
+
+const chairmen = [
   { role: "Co-Chairman", name: "Prof. Jagtar Singh", title: "Department of Mechanical Engineering", photo: imgJagtarSingh, tier: 2 },
+  { role: "Chairman", name: "Prof. Shankar Singh", title: "Head, Mechanical & Civil Engineering", photo: imgShankarSingh, tier: 2 },
 ];
 
 interface TrackData {
@@ -88,8 +92,10 @@ const getInitials = (name: string) => {
   return parts.map(p => p[0]).join("").toUpperCase();
 };
 
+type LeaderMember = { role: string; name: string; title: string; photo: string; tier: number };
+
 // Chief Patron — hero card
-const ChiefPatronCard = ({ member }: { member: typeof leadership[0] }) => (
+const ChiefPatronCard = ({ member }: { member: LeaderMember }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -126,7 +132,7 @@ const ChiefPatronCard = ({ member }: { member: typeof leadership[0] }) => (
 );
 
 // Patron / Chairman cards — medium
-const LeaderCard = ({ member, index }: { member: typeof leadership[0]; index: number }) => (
+const LeaderCard = ({ member, index }: { member: LeaderMember; index: number }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -180,9 +186,6 @@ const MemberCard = ({ name, designation, photo, roleLabel }: { name: string; des
 );
 
 const CommitteeSection = () => {
-  const chiefPatron = leadership[0];
-  const otherLeaders = leadership.slice(1);
-
   return (
     <section className="section-padding bg-background relative overflow-hidden">
       <TechBackground />
@@ -209,12 +212,19 @@ const CommitteeSection = () => {
           <div className="w-20 h-1 bg-accent mx-auto mt-4 rounded-full" />
         </motion.div>
 
-        {/* Chief Patron — full width hero */}
-        <ChiefPatronCard member={chiefPatron} />
+        {/* Row 1: Chief Patron */}
+        <ChiefPatronCard member={chiefPatronData} />
 
-        {/* Patrons & Chairman row */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {otherLeaders.map((p, i) => (
+        {/* Row 2: Patrons */}
+        <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-10">
+          {patrons.map((p, i) => (
+            <LeaderCard key={p.name + p.role} member={p} index={i} />
+          ))}
+        </div>
+
+        {/* Row 3: Chairman & Co-Chairman */}
+        <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-20">
+          {chairmen.map((p, i) => (
             <LeaderCard key={p.name + p.role} member={p} index={i} />
           ))}
         </div>

@@ -85,9 +85,6 @@ const CallForPapers = () => {
             Submission <span className="text-accent">Process</span>
           </h3>
           <div className="relative">
-            {/* Connecting line */}
-            <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-accent/20 via-accent to-accent/20 -translate-y-1/2 z-0" />
-            
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-3 relative z-10">
               {flowSteps.map((step, i) => (
                 <motion.div

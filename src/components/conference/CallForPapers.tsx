@@ -173,17 +173,41 @@ const CallForPapers = () => {
                   </div>
                 ))}
               </div>
-              <div className="bg-accent/10 rounded-lg p-4 border border-accent/20">
-                <p className="text-foreground text-sm font-medium flex items-center gap-2">
-                  <BookOpen size={16} className="text-accent" /> Publication Opportunity
-                </p>
-                <p className="text-foreground text-sm mt-1">
-                  All accepted and presented manuscripts will be published in reputed journals as per their relevancy. Name of journals will be announced soon.
-                </p>
-              </div>
             </div>
           </motion.div>
         </div>
+
+        {/* Publication Opportunity - Standalone Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-14"
+        >
+          <div className="relative bg-gradient-to-br from-accent/10 via-card to-accent/5 rounded-2xl border-2 border-accent/30 p-8 md:p-10 shadow-elevated overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute top-0 right-0 w-40 h-40 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+            
+            <div className="relative z-10">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center">
+                  <BookOpen size={24} className="text-accent" />
+                </div>
+                <h3 className="font-heading font-bold text-2xl md:text-3xl text-foreground">
+                  Publication <span className="text-accent">Opportunity</span>
+                </h3>
+              </div>
+              <div className="w-16 h-1 bg-accent rounded-full mb-6" />
+              <p className="text-foreground leading-relaxed text-base md:text-lg mb-4">
+                There will be <strong className="text-accent">Scopus Index publication opportunities</strong> for all submitted manuscripts which will be presented at IESSD'26. These opportunities are designed to enhance the visibility and impact of your research within the global academic community.
+              </p>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                Immediately after the conference, the authors of the presented papers will be invited to submit their full-length papers as per the publication format of <strong className="text-foreground">Springer Book Series (Conference Proceedings)</strong> or <strong className="text-foreground">IOP Science Conference Series publication</strong>, etc. The papers will be accepted for publication after the peer review process.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

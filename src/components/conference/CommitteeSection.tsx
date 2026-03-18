@@ -32,8 +32,8 @@ const patrons = [
 ];
 
 const chairmen = [
-  { role: "Co-Chairman", name: "Prof. Jagtar Singh", title: "Department of Mechanical Engineering", photo: imgJagtarSingh, tier: 2 },
   { role: "Chairman", name: "Prof. Shankar Singh", title: "Head, Mechanical & Civil Engineering", photo: imgShankarSingh, tier: 2 },
+  { role: "Co-Chairman", name: "Prof. Jagtar Singh", title: "Department of Mechanical Engineering", photo: imgJagtarSingh, tier: 2 },
 ];
 
 interface TrackData {

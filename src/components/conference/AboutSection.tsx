@@ -82,27 +82,11 @@ const AboutSection = () => {
               Sant Longowal Institute of Engineering and Technology (SLIET) is a centrally funded technical institute (Deemed-to-be-University) established by the Ministry of Education (formerly MHRD), Government of India, with the aim of achieving technological excellence through innovation.
             </p>
             <p className="text-foreground leading-relaxed mb-4 text-sm">
-              The institute caters to the technical manpower requirements at various levels by adopting a modular system of imparting technical education, with emphasis on practical training in industry. It offers Integrated Certificate Diploma (ICD), B.E., M.Tech., M.Sc., MBA, and Ph.D. programmes in various disciplines of Science, Management, Engineering, and Technology.
+              The institute caters to the technical manpower requirements at various levels by adopting a modular system of imparting technical education, with emphasis on practical training in industry. It offers Integrated Certificate Diploma (ICD), B.E., M.Tech., M.Sc., MBA, and Ph.D. programmes in various disciplines of Science, Management, <a href="/Post-Doctoral-Fellowship-2025-26.pdf" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold underline underline-offset-2 hover:text-accent/80 transition-colors">Engineering</a>, and Technology.
             </p>
             <p className="text-foreground leading-relaxed text-sm">
                SLIET has a sprawling campus spread over 447 acres of land, situated on the outskirts of Longowal, approximately 8 km from the Sangrur–Barnala Highway. The nearest railway stations are Sangrur (18 km), Sunam (16 km), and Dhuri (32 km), while the nearest airport is Chandigarh (approximately 130 km).
              </p>
-             <div className="mt-6 flex flex-wrap gap-4">
-               <a
-                 href="/IESSD26-Brochure.pdf"
-                 download
-                 className="inline-flex items-center gap-2 bg-accent/10 hover:bg-accent/20 border border-accent/30 text-accent font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
-               >
-                 📄 Download Conference Brochure
-               </a>
-               <a
-                 href="/Post-Doctoral-Fellowship-2025-26.pdf"
-                 download
-                 className="inline-flex items-center gap-2 bg-accent/10 hover:bg-accent/20 border border-accent/30 text-accent font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
-               >
-                 📄 Post-Doctoral Fellowship (Visvesvaraya Scheme)
-               </a>
-             </div>
            </div>
          </motion.div>
 

@@ -205,6 +205,11 @@ const CallForPapers = () => {
               <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                 Immediately after the conference, the authors of the presented papers will be invited to submit their full-length papers as per the publication format of <strong className="text-foreground">Springer Book Series (Conference Proceedings)</strong> or <strong className="text-foreground">IOP Science Conference Series publication</strong>, etc. The papers will be accepted for publication after the peer review process.
               </p>
+              <div className="mt-6 pt-6 border-t border-accent/20">
+                <p className="text-muted-foreground leading-relaxed text-xs md:text-sm">
+                  The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>

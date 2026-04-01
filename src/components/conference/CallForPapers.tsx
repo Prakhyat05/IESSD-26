@@ -203,7 +203,7 @@ const CallForPapers = () => {
                 There will be <strong className="text-accent">Scopus Index publication opportunities</strong> for all submitted manuscripts which will be presented at IESSD'26. These opportunities are designed to enhance the visibility and impact of your research within the global academic community.
               </p>
               <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                Immediately after the conference, the authors of the presented papers will be invited to submit their full-length papers as per the publication format of <strong className="text-foreground">Springer Book Series (Conference Proceedings)</strong> or <strong className="text-foreground">IOP Science Conference Series publication</strong>, etc. The papers will be accepted for publication after the peer review process.
+                Immediately after the conference, the authors of the presented papers will be invited to submit their full-length papers as per the publication format of <strong className="text-foreground">Springer Book Series (Conference Proceedings)</strong>. The papers will be accepted for publication after the peer review process.
               </p>
               <div className="mt-6 pt-6 border-t border-accent/20">
                 <p className="text-muted-foreground leading-relaxed text-xs md:text-sm">

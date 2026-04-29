@@ -14,12 +14,22 @@ import ContactSection from "@/components/conference/ContactSection";
 import Footer from "@/components/conference/Footer";
 
 const Index = () => {
-  const [showSplash, setShowSplash] = useState(true);
+  const [showSplash, setShowSplash] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return !sessionStorage.getItem("iessd_splash_shown");
+  });
 
   return (
     <>
       <AnimatePresence>
-        {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
+        {showSplash && (
+          <SplashScreen
+            onComplete={() => {
+              sessionStorage.setItem("iessd_splash_shown", "1");
+              setShowSplash(false);
+            }}
+          />
+        )}
       </AnimatePresence>
       <Navbar />
       <HeroSection />

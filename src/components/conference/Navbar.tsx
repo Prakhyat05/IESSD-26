@@ -36,21 +36,21 @@ const Navbar = () => {
         scrolled || !isHome ? "bg-card/95 backdrop-blur-md shadow-card border-b border-border" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="IESSD'26 Logo" className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover" />
-          <span className={`font-heading font-bold text-lg md:text-xl transition-colors ${textColor}`}>
+      <div className="container mx-auto flex items-center justify-between gap-4 h-16 md:h-20">
+        <Link to="/" className="flex items-center gap-2 shrink-0">
+          <img src={logo} alt="IESSD'26 Logo" className="w-9 h-9 md:w-11 md:h-11 rounded-full object-cover" />
+          <span className={`font-heading font-bold text-base md:text-lg transition-colors ${textColor}`}>
             IESSD'26
           </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-2">
+        <nav className="hidden xl:flex items-center gap-1 flex-1 justify-end">
           {navLinks.map((l) => (
             <Link
               key={l.href}
               to={l.href}
-              className={`px-4 py-2.5 text-[15px] font-semibold rounded-lg transition-all duration-200 hover:bg-accent/15 ${
+              className={`px-2.5 py-2 text-[13px] font-semibold rounded-md whitespace-nowrap transition-all duration-200 hover:bg-accent/15 ${
                 location.pathname === l.href
                   ? "text-accent bg-accent/10"
                   : scrolled || !isHome
@@ -61,14 +61,14 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
-          <Button asChild className="ml-4 bg-accent hover:bg-accent/90 border-0 text-accent-foreground font-semibold shadow-card text-[15px] px-5 py-2.5">
-            <Link to="/registration">Register Now</Link>
+          <Button asChild className="ml-2 bg-accent hover:bg-accent/90 border-0 text-accent-foreground font-semibold shadow-card text-[13px] px-4 py-2 whitespace-nowrap">
+            <Link to="/registration">Register</Link>
           </Button>
         </nav>
 
         {/* Mobile toggle */}
         <button
-          className={`lg:hidden p-2 ${textColor}`}
+          className={`xl:hidden p-2 ${textColor}`}
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
@@ -77,7 +77,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden bg-card/95 backdrop-blur-md border-t border-border">
+        <div className="xl:hidden bg-card/95 backdrop-blur-md border-t border-border">
           <nav className="container mx-auto py-4 flex flex-col gap-1">
             {navLinks.map((l) => (
               <Link

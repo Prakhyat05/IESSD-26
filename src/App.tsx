@@ -9,6 +9,7 @@ import TracksPage from "./pages/TracksPage";
 import CallForPapersPage from "./pages/CallForPapersPage";
 import RegistrationPage from "./pages/RegistrationPage";
 import CommitteePage from "./pages/CommitteePage";
+import SpeakersPage from "./pages/SpeakersPage";
 import VenuePage from "./pages/VenuePage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/call-for-papers" element={<CallForPapersPage />} />
           <Route path="/registration" element={<RegistrationPage />} />
           <Route path="/committee" element={<CommitteePage />} />
+          <Route path="/speakers" element={<SpeakersPage />} />
           <Route path="/venue" element={<VenuePage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFound />} />

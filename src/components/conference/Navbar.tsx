@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Tracks", href: "/tracks" },
   { label: "Call for Papers", href: "/call-for-papers" },
   { label: "Registration", href: "/registration" },
+  { label: "Speakers", href: "/speakers" },
   { label: "Committee", href: "/committee" },
   { label: "Venue", href: "/venue" },
   { label: "Contact", href: "/contact" },

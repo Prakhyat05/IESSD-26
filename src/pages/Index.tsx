@@ -8,6 +8,7 @@ import TracksSection from "@/components/conference/TracksSection";
 import CallForPapers from "@/components/conference/CallForPapers";
 import RegistrationSection from "@/components/conference/RegistrationSection";
 import CommitteeSection from "@/components/conference/CommitteeSection";
+import SpeakersSection from "@/components/conference/SpeakersSection";
 import VenueSection from "@/components/conference/VenueSection";
 import ContactSection from "@/components/conference/ContactSection";
 import Footer from "@/components/conference/Footer";
@@ -26,6 +27,7 @@ const Index = () => {
       <TracksSection />
       <CallForPapers />
       <RegistrationSection />
+      <SpeakersSection />
       <CommitteeSection />
       <VenueSection />
       <ContactSection />

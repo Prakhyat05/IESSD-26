@@ -32,7 +32,6 @@ const Index = () => {
           />
         )}
       </AnimatePresence>
-      </AnimatePresence>
       <Navbar />
       <HeroSection />
       <AboutSection />

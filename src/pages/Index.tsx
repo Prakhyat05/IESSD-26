@@ -13,11 +13,12 @@ import VenueSection from "@/components/conference/VenueSection";
 import ContactSection from "@/components/conference/ContactSection";
 import Footer from "@/components/conference/Footer";
 
+// Module-scoped flag: persists across route changes within a single page load,
+// but resets on full reload (new website open).
+let splashShownThisLoad = false;
+
 const Index = () => {
-  const [showSplash, setShowSplash] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return !sessionStorage.getItem("iessd_splash_shown");
-  });
+  const [showSplash, setShowSplash] = useState(() => !splashShownThisLoad);
 
   return (
     <>
@@ -25,11 +26,12 @@ const Index = () => {
         {showSplash && (
           <SplashScreen
             onComplete={() => {
-              sessionStorage.setItem("iessd_splash_shown", "1");
+              splashShownThisLoad = true;
               setShowSplash(false);
             }}
           />
         )}
+      </AnimatePresence>
       </AnimatePresence>
       <Navbar />
       <HeroSection />

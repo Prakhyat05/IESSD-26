@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { FileText, Mail, BookOpen, Clock, ArrowRight, CheckCircle, Send, Edit, Search, Award } from "lucide-react";
+import { FileText, Mail, BookOpen, Clock, ArrowRight, CheckCircle, Send, Edit, Search, Award, ExternalLink } from "lucide-react";
 import TechBackground from "./TechBackground";
 import conferenceHall from "@/assets/conference-hall.jpg";
+import cmtQr from "@/assets/cmt-submission-qr.jpeg";
 
 const dates = [
   { event: "Extended Abstract Submission", date: "June 30, 2026", active: true },
@@ -158,11 +159,48 @@ const CallForPapers = () => {
               <Mail className="text-accent" size={22} />
               Submission of Papers
             </h3>
-            <div className="bg-card rounded-2xl border border-border p-6 md:p-8 shadow-card space-y-4">
+            <div className="bg-card rounded-2xl border border-border p-6 md:p-8 shadow-card space-y-5">
               <p className="text-foreground leading-relaxed text-sm">
                 Authors can submit full length paper by email to the respective track. While submitting manuscript, appropriate format must be followed. Manuscript must be submitted in <strong>PDF format</strong>. Guidelines for manuscripts preparation will be available on the website.
               </p>
+
+              {/* Microsoft CMT submission portal */}
+              <div className="rounded-xl border-2 border-accent/40 bg-accent/5 p-5">
+                <div className="flex items-start gap-4">
+                  <div className="flex-1">
+                    <p className="font-heading font-bold text-foreground text-sm md:text-base mb-1">
+                      Submit via Microsoft CMT
+                    </p>
+                    <p className="text-muted-foreground text-xs leading-relaxed mb-3">
+                      Use the official conference management portal to submit and track your paper.
+                    </p>
+                    <a
+                      href="https://cmt3.research.microsoft.com/IESSD2026/Submission/Index"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-4 py-2 rounded-lg text-xs md:text-sm font-semibold hover:bg-accent/90 transition-colors"
+                    >
+                      Open Submission Portal
+                      <ExternalLink size={14} />
+                    </a>
+                    <p className="text-[11px] text-muted-foreground mt-2 break-all font-mono">
+                      cmt3.research.microsoft.com/IESSD2026/Submission/Index
+                    </p>
+                  </div>
+                  <a
+                    href="https://cmt3.research.microsoft.com/IESSD2026/Submission/Index"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="shrink-0 bg-card p-2 rounded-lg border border-border hover:border-accent transition-colors"
+                    aria-label="Scan QR code to open the submission portal"
+                  >
+                    <img src={cmtQr} alt="QR code linking to the IESSD'26 Microsoft CMT submission portal" className="w-24 h-24 md:w-28 md:h-28 object-contain" />
+                  </a>
+                </div>
+              </div>
+
               <div className="space-y-3">
+                <p className="text-foreground font-semibold text-sm">Track Coordination Emails</p>
                 {trackEmails.map((t) => (
                   <div key={t.track} className="bg-muted/50 rounded-lg p-4 border border-border hover:border-accent/30 transition-colors group">
                     <p className="text-foreground font-medium text-sm flex items-center gap-2">
@@ -205,6 +243,11 @@ const CallForPapers = () => {
               <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
                 Immediately after the conference, the authors of the presented papers will be invited to submit their full-length papers as per the publication format of <strong className="text-foreground">Springer Book Series (Conference Proceedings)</strong>. The papers will be accepted for publication after the peer review process.
               </p>
+              <div className="mt-5 rounded-xl border border-accent/30 bg-accent/5 p-5">
+                <p className="text-foreground leading-relaxed text-sm md:text-base">
+                  In addition, <strong className="text-accent">selected accepted and presented research articles</strong> will be recommended to high-quality <strong>WoS / Scopus indexed journals</strong>, subject to rigorous peer review and alignment with the journal's scope. Standard publisher <strong>Article Processing Charges (APCs)</strong> will apply upon acceptance and are to be borne directly by the authors.
+                </p>
+              </div>
               <div className="mt-6 pt-6 border-t border-accent/20">
                 <p className="text-muted-foreground leading-relaxed text-xs md:text-sm">
                   The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.

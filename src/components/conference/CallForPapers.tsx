@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FileText, Mail, BookOpen, Clock, ArrowRight, CheckCircle, Send, Edit, Search, Award, ExternalLink } from "lucide-react";
+import { FileText, Mail, BookOpen, Clock, ArrowRight, CheckCircle, Send, Edit, Search, Award, ExternalLink, Download } from "lucide-react";
 import TechBackground from "./TechBackground";
 import conferenceHall from "@/assets/conference-hall.jpg";
 import cmtQr from "@/assets/cmt-submission-qr.jpeg";
@@ -199,8 +199,36 @@ const CallForPapers = () => {
                 </div>
               </div>
 
+              {/* Abstract Template Downloads */}
+              <div className="rounded-xl border border-border bg-muted/40 p-5">
+                <p className="font-heading font-bold text-foreground text-sm md:text-base mb-1">
+                  Abstract Submission Template
+                </p>
+                <p className="text-muted-foreground text-xs leading-relaxed mb-3">
+                  Download the official template and prepare your extended abstract accordingly.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <a
+                    href="/Abstract_Template_IESSD_26.docx"
+                    download
+                    className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-4 py-2 rounded-lg text-xs md:text-sm font-semibold hover:bg-accent/90 transition-colors"
+                  >
+                    <Download size={14} />
+                    Download Word (.docx)
+                  </a>
+                  <a
+                    href="/Abstract_Template_IESSD_26.pdf"
+                    download
+                    className="inline-flex items-center gap-2 bg-card border border-accent/40 text-foreground px-4 py-2 rounded-lg text-xs md:text-sm font-semibold hover:border-accent transition-colors"
+                  >
+                    <Download size={14} />
+                    Download PDF
+                  </a>
+                </div>
+              </div>
+
               <div className="space-y-3">
-                <p className="text-foreground font-semibold text-sm">Track Coordination Emails</p>
+                <p className="text-foreground font-semibold text-sm">Track Chair Emails</p>
                 {trackEmails.map((t) => (
                   <div key={t.track} className="bg-muted/50 rounded-lg p-4 border border-border hover:border-accent/30 transition-colors group">
                     <p className="text-foreground font-medium text-sm flex items-center gap-2">
@@ -237,17 +265,9 @@ const CallForPapers = () => {
                 </h3>
               </div>
               <div className="w-16 h-1 bg-accent rounded-full mb-6" />
-              <p className="text-foreground leading-relaxed text-base md:text-lg mb-4">
-                There will be <strong className="text-accent">Scopus Index publication opportunities</strong> for all submitted manuscripts which will be presented at IESSD'26. These opportunities are designed to enhance the visibility and impact of your research within the global academic community.
+              <p className="text-foreground leading-relaxed text-base md:text-lg">
+                Selected accepted and presented research articles will be recommended to high-quality WoS/Scopus journals, subject to rigorous peer review and alignment with the journal's scope. Standard publisher Article Processing Charges (APCs) will apply upon acceptance and are to be borne directly by the authors.
               </p>
-              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
-                Immediately after the conference, the authors of the presented papers will be invited to submit their full-length papers as per the publication format of <strong className="text-foreground">Springer Book Series (Conference Proceedings)</strong>. The papers will be accepted for publication after the peer review process.
-              </p>
-              <div className="mt-5 rounded-xl border border-accent/30 bg-accent/5 p-5">
-                <p className="text-foreground leading-relaxed text-sm md:text-base">
-                  In addition, <strong className="text-accent">selected accepted and presented research articles</strong> will be recommended to high-quality <strong>WoS / Scopus indexed journals</strong>, subject to rigorous peer review and alignment with the journal's scope. Standard publisher <strong>Article Processing Charges (APCs)</strong> will apply upon acceptance and are to be borne directly by the authors.
-                </p>
-              </div>
               <div className="mt-6 pt-6 border-t border-accent/20">
                 <p className="text-muted-foreground leading-relaxed text-xs md:text-sm">
                   The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.

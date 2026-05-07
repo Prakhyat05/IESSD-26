@@ -16,7 +16,7 @@ const tracks = [
       "Material Recycling and Characterization",
       "AI and ML in Manufacturing",
       "Additive Manufacturing",
-      "Nanomaterials and Composites in Manufacturing Processes",
+      "Polymers & Composites, Nanomaterials in Manufacturing Processes",
       "Environmental Impact Assessment in Manufacturing Processes",
       "Optimization in Manufacturing Processes",
       "Surface Engineering Science and Technology",

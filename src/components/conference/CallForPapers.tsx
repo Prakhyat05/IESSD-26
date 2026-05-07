@@ -161,7 +161,7 @@ const CallForPapers = () => {
             </h3>
             <div className="bg-card rounded-2xl border border-border p-6 md:p-8 shadow-card space-y-5">
               <p className="text-foreground leading-relaxed text-sm">
-                Authors can submit full length paper by email to the respective track. While submitting manuscript, appropriate format must be followed. Manuscript must be submitted in <strong>PDF format</strong>. Guidelines for manuscripts preparation will be available on the website.
+                All paper submissions must be made exclusively through the <strong>Microsoft CMT portal</strong>. Submissions sent by email will not be considered. Manuscripts must be submitted in <strong>PDF format</strong> following the prescribed template. Guidelines for manuscript preparation are available on the website.
               </p>
 
               {/* Microsoft CMT submission portal */}

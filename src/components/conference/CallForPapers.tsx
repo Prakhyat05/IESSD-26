@@ -20,10 +20,10 @@ const trackEmails = [
 
 const flowSteps = [
   { icon: Edit, title: "Prepare Abstract", desc: "Write your extended abstract following the conference template and guidelines" },
-  { icon: Send, title: "Submit via Email", desc: "Email your manuscript (PDF) to the respective track email address" },
+  { icon: Send, title: "Submit via CMT Portal", desc: "Upload your manuscript (PDF) on the Microsoft CMT submission portal" },
   { icon: Search, title: "Peer Review", desc: "Your paper undergoes rigorous peer review by the technical committee" },
   { icon: CheckCircle, title: "Acceptance", desc: "Receive notification of acceptance with reviewer feedback" },
-  { icon: FileText, title: "Submit Full Paper", desc: "Revise and submit the full-length paper incorporating reviewer comments" },
+  { icon: FileText, title: "Submit Full Paper", desc: "Revise and upload the full-length paper on CMT incorporating reviewer comments" },
   { icon: Award, title: "Present & Publish", desc: "Present at IESSD'26 and get published in reputed journals" },
 ];
 
@@ -161,7 +161,7 @@ const CallForPapers = () => {
             </h3>
             <div className="bg-card rounded-2xl border border-border p-6 md:p-8 shadow-card space-y-5">
               <p className="text-foreground leading-relaxed text-sm">
-                Authors can submit full length paper by email to the respective track. While submitting manuscript, appropriate format must be followed. Manuscript must be submitted in <strong>PDF format</strong>. Guidelines for manuscripts preparation will be available on the website.
+                All paper submissions must be made exclusively through the <strong>Microsoft CMT portal</strong>. Submissions sent by email will not be considered. Manuscripts must be submitted in <strong>PDF format</strong> following the prescribed template. Guidelines for manuscript preparation are available on the website.
               </p>
 
               {/* Microsoft CMT submission portal */}
@@ -228,7 +228,7 @@ const CallForPapers = () => {
               </div>
 
               <div className="space-y-3">
-                <p className="text-foreground font-semibold text-sm">Track Chair Emails</p>
+                <p className="text-foreground font-semibold text-sm">Track Chair Emails <span className="text-muted-foreground font-normal text-xs">(for queries only — submissions via CMT)</span></p>
                 {trackEmails.map((t) => (
                   <div key={t.track} className="bg-muted/50 rounded-lg p-4 border border-border hover:border-accent/30 transition-colors group">
                     <p className="text-foreground font-medium text-sm flex items-center gap-2">

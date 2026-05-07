@@ -228,7 +228,7 @@ const CallForPapers = () => {
               </div>
 
               <div className="space-y-3">
-                <p className="text-foreground font-semibold text-sm">Track Chair Emails</p>
+                <p className="text-foreground font-semibold text-sm">Track Chair Emails <span className="text-muted-foreground font-normal text-xs">(for queries only — submissions via CMT)</span></p>
                 {trackEmails.map((t) => (
                   <div key={t.track} className="bg-muted/50 rounded-lg p-4 border border-border hover:border-accent/30 transition-colors group">
                     <p className="text-foreground font-medium text-sm flex items-center gap-2">

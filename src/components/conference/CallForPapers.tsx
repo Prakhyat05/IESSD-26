@@ -20,10 +20,10 @@ const trackEmails = [
 
 const flowSteps = [
   { icon: Edit, title: "Prepare Abstract", desc: "Write your extended abstract following the conference template and guidelines" },
-  { icon: Send, title: "Submit via Email", desc: "Email your manuscript (PDF) to the respective track email address" },
+  { icon: Send, title: "Submit via CMT Portal", desc: "Upload your manuscript (PDF) on the Microsoft CMT submission portal" },
   { icon: Search, title: "Peer Review", desc: "Your paper undergoes rigorous peer review by the technical committee" },
   { icon: CheckCircle, title: "Acceptance", desc: "Receive notification of acceptance with reviewer feedback" },
-  { icon: FileText, title: "Submit Full Paper", desc: "Revise and submit the full-length paper incorporating reviewer comments" },
+  { icon: FileText, title: "Submit Full Paper", desc: "Revise and upload the full-length paper on CMT incorporating reviewer comments" },
   { icon: Award, title: "Present & Publish", desc: "Present at IESSD'26 and get published in reputed journals" },
 ];
 

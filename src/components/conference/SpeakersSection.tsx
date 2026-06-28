@@ -122,7 +122,6 @@ const tracks: Track[] = [
       },
     ],
     international: [
-      { name: "Prof. Tatjana Sibalija", affiliation: "Metropolitan University in Belgrade, Serbia", email: "tatjana.sibalija@metropolitan.ac.rs" },
       { name: "Prof. Ramana Vinjamuri", affiliation: "University of Maryland, Baltimore County, USA", email: "rvinjam1@umbc.edu" },
       { name: "Prof. Xiao-Zhi Gao", affiliation: "University of Eastern Finland, Finland", email: "xiao.z.gao@gmail.com" },
       { name: "Prof. Lagouge Tartibu", affiliation: "University of Johannesburg, South Africa", email: "ltartibu@uj.ac.za" },

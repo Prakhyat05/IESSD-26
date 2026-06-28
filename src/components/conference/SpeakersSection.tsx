@@ -10,7 +10,7 @@ import tatjana from "@/assets/speakers/tatjana.jpg";
 import ramana from "@/assets/speakers/ramana.jpg";
 import pushparaj from "@/assets/speakers/pushparaj.jpg";
 import deepak from "@/assets/speakers/deepak.jpg";
-import ivanka from "@/assets/speakers/ivanka.jpg";
+import sena from "@/assets/speakers/sena.jpg";
 import sangam from "@/assets/speakers/sangam.jpg";
 import premPal from "@/assets/speakers/prem-pal.jpg";
 import surendra from "@/assets/speakers/surendra.jpg";
@@ -152,10 +152,10 @@ const tracks: Track[] = [
     title: "Track 3 — Sustainable Innovations in Civil Engineering",
     speakers: [
       {
-        name: "Prof. Dr. Ivanka Netinger Grubeša",
-        affiliation: "Department for Civil Engineering, University North, Varaždin, Croatia",
-        email: "inetinger@unin.hr",
-        image: ivanka,
+        name: "Dr. Sena Tayfur, PhD",
+        affiliation: "Department of Civil Engineering, Ege University, 35100 Bornova, Izmir, Turkey",
+        email: "sena.tayfur@ege.edu.tr",
+        image: sena,
         scope: "International",
       },
       {
@@ -182,7 +182,7 @@ const tracks: Track[] = [
       },
     ],
     international: [
-      { name: "Prof. Dr. Ivanka Netinger Grubeša", affiliation: "University North, Varaždin, Croatia", email: "inetinger@unin.hr" },
+      { name: "Dr. Sena Tayfur", affiliation: "Ege University, Izmir, Turkey", email: "sena.tayfur@ege.edu.tr" },
       { name: "Dr. Raju Sharma", affiliation: "University of Sherbrooke, Quebec, Canada", email: "Raju.Sharma@USherbrooke.ca" },
       { name: "Prof. Aruz Petcherdchoo", affiliation: "King Mongkut’s University of Technology, North Bangkok, Thailand", email: "aruz.p@eng.kmutnb.ac.th" },
       { name: "Dr. Ekbordin Winijkul", affiliation: "Dean, Faculty of Civil and Environmental Engineering, AIT, Bangkok, Thailand" },

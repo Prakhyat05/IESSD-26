@@ -232,10 +232,10 @@ const HeroSection = () => {
           </Button>
           <Button asChild size="lg" variant="outline" className="border-accent/50 text-accent hover:bg-accent/10 font-bold text-base px-10 py-3 text-lg">
             <a
-              href="#call-for-papers"
+              href="#cfp"
               onClick={(e) => {
                 e.preventDefault();
-                document.getElementById("call-for-papers")?.scrollIntoView({ behavior: "smooth" });
+                document.getElementById("cfp")?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               Submit Paper

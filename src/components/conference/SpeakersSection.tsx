@@ -6,7 +6,6 @@ import jawahir from "@/assets/speakers/jawahir.jpg";
 import tuhin from "@/assets/speakers/tuhin.jpg";
 import navin from "@/assets/speakers/navin.jpg";
 import navneet from "@/assets/speakers/navneet.jpg";
-import tatjana from "@/assets/speakers/tatjana.jpg";
 import ramana from "@/assets/speakers/ramana.jpg";
 import pushparaj from "@/assets/speakers/pushparaj.jpg";
 import deepak from "@/assets/speakers/deepak.jpg";

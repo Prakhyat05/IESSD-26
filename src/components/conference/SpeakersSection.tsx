@@ -6,7 +6,6 @@ import jawahir from "@/assets/speakers/jawahir.jpg";
 import tuhin from "@/assets/speakers/tuhin.jpg";
 import navin from "@/assets/speakers/navin.jpg";
 import navneet from "@/assets/speakers/navneet.jpg";
-import tatjana from "@/assets/speakers/tatjana.jpg";
 import ramana from "@/assets/speakers/ramana.jpg";
 import pushparaj from "@/assets/speakers/pushparaj.jpg";
 import deepak from "@/assets/speakers/deepak.jpg";
@@ -100,13 +99,6 @@ const tracks: Track[] = [
     title: "Track 2 — Intelligent Robotics & Automation for Sustainable Systems",
     speakers: [
       {
-        name: "Prof. Dr. Tatjana Sibalija",
-        affiliation: "Faculty of Mechanical Engineering, Metropolitan University in Belgrade, Serbia",
-        email: "tatjana.sibalija@metropolitan.ac.rs",
-        image: tatjana,
-        scope: "International",
-      },
-      {
         name: "Dr. Ramana Vinjamuri",
         affiliation:
           "Associate Professor, Computer Science & Electrical Engineering, University of Maryland, Baltimore County, USA",
@@ -130,7 +122,6 @@ const tracks: Track[] = [
       },
     ],
     international: [
-      { name: "Prof. Tatjana Sibalija", affiliation: "Metropolitan University in Belgrade, Serbia", email: "tatjana.sibalija@metropolitan.ac.rs" },
       { name: "Prof. Ramana Vinjamuri", affiliation: "University of Maryland, Baltimore County, USA", email: "rvinjam1@umbc.edu" },
       { name: "Prof. Xiao-Zhi Gao", affiliation: "University of Eastern Finland, Finland", email: "xiao.z.gao@gmail.com" },
       { name: "Prof. Lagouge Tartibu", affiliation: "University of Johannesburg, South Africa", email: "ltartibu@uj.ac.za" },

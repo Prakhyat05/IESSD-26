@@ -99,13 +99,6 @@ const tracks: Track[] = [
     title: "Track 2 — Intelligent Robotics & Automation for Sustainable Systems",
     speakers: [
       {
-        name: "Prof. Dr. Tatjana Sibalija",
-        affiliation: "Faculty of Mechanical Engineering, Metropolitan University in Belgrade, Serbia",
-        email: "tatjana.sibalija@metropolitan.ac.rs",
-        image: tatjana,
-        scope: "International",
-      },
-      {
         name: "Dr. Ramana Vinjamuri",
         affiliation:
           "Associate Professor, Computer Science & Electrical Engineering, University of Maryland, Baltimore County, USA",

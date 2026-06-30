@@ -278,7 +278,7 @@ const HeroSection = () => {
           className="mb-10"
         >
           <p className="text-xs uppercase tracking-[0.2em] mb-5 font-semibold" style={{ color: "hsl(160, 60%, 55%)" }}>
-            Abstract Submission Deadline
+            Extended Abstract Submission Deadline
           </p>
           <div className="flex justify-center gap-3 md:gap-6">
             {[

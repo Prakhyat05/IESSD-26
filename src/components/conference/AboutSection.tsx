@@ -132,7 +132,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6"
         >
           {[
             { icon: BookOpen, label: "Research Tracks", value: "3 Tracks" },

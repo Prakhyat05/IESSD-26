@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { BookOpen, GraduationCap, Globe, Cpu, Zap } from "lucide-react";
 import deptBuilding from "@/assets/dept-building.jpeg";
 import slietAdmin from "@/assets/sliet-admin.webp";
-import brochureAsset from "@/assets/IESSD26-Brochure.pdf.asset.json";
+
 import TechBackground from "./TechBackground";
 
 const AboutSection = () => {
@@ -52,11 +52,13 @@ const AboutSection = () => {
           </p>
           <div className="pl-[52px]">
             <a
-              href={brochureAsset.url}
-              download="IESSD26-Brochure.pdf"
+              href="/IESSD26-Brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              type="application/pdf"
               className="inline-flex items-center gap-2 bg-accent/10 hover:bg-accent/20 border border-accent/30 text-accent font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
             >
-              📄 Download Conference Brochure
+              📄 Download Conference Brochure (PDF)
             </a>
           </div>
         </motion.div>
@@ -130,7 +132,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6"
         >
           {[
             { icon: BookOpen, label: "Research Tracks", value: "3 Tracks" },

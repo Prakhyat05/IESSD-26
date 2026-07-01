@@ -53,9 +53,7 @@ const AboutSection = () => {
           <div className="pl-[52px]">
             <a
               href="/IESSD26-Brochure.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              type="application/pdf"
+              download="IESSD26-Brochure.pdf"
               className="inline-flex items-center gap-2 bg-accent/10 hover:bg-accent/20 border border-accent/30 text-accent font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
             >
               📄 Download Conference Brochure (PDF)

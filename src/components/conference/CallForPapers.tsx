@@ -166,8 +166,8 @@ const CallForPapers = () => {
 
               {/* Microsoft CMT submission portal */}
               <div className="rounded-xl border-2 border-accent/40 bg-accent/5 p-5">
-                <div className="flex items-start gap-4">
-                  <div className="flex-1">
+                <div className="flex flex-col sm:flex-row items-start gap-4">
+                  <div className="flex-1 min-w-0 w-full">
                     <p className="font-heading font-bold text-foreground text-sm md:text-base mb-1">
                       Submit via Microsoft CMT
                     </p>
@@ -191,7 +191,7 @@ const CallForPapers = () => {
                     href="https://cmt3.research.microsoft.com/IESSD2026/Submission/Index"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="shrink-0 bg-card p-2 rounded-lg border border-border hover:border-accent transition-colors"
+                    className="shrink-0 self-center sm:self-start bg-card p-2 rounded-lg border border-border hover:border-accent transition-colors"
                     aria-label="Scan QR code to open the submission portal"
                   >
                     <img src={cmtQr} alt="QR code linking to the IESSD'26 Microsoft CMT submission portal" className="w-24 h-24 md:w-28 md:h-28 object-contain" />

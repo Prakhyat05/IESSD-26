@@ -10,7 +10,7 @@ import logoIce from "@/assets/logo-ice.jpeg";
 import logoAtmanirbhar from "@/assets/logo-atmanirbhar.png";
 
 const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfMWCNK4A-WriIz0HZ8iW8CFZTVhR7grSxkQmUJUqb_smHBcA/viewform";
-const targetDate = new Date("2026-07-31T23:59:59").getTime();
+const targetDate = new Date("2026-09-30T23:59:59+05:30").getTime();
 
 /* Floating 3D-style geometric shapes */
 const FloatingShape = ({ delay, x, y, size, shape }: { delay: number; x: string; y: string; size: number; shape: "hex" | "tri" | "diamond" }) => {

@@ -77,12 +77,12 @@ const tracks: TrackData[] = [
     icon: Award,
     organizingSecretaries: [
       { name: "Prof. Indraj Singh", designation: "Professor (ME)", photo: imgIndrajSingh },
+      { name: "Dr. Rakesh Kumar", designation: "Associate Professor (ME)", photo: imgRakeshKumar },
       { name: "Dr. Sumit Kumar", designation: "Assistant Professor (ME)", photo: imgSumitKumar },
     ],
     jointSecretaries: [
-      { name: "Dr. Rakesh Kumar", designation: "Associate Professor (ME)", photo: imgRakeshKumar },
       { name: "Dr. Yogesh Verma", designation: "Assistant Professor (ME)", photo: imgYogeshVerma },
-      { name: "Dr. Shilpa Singla", designation: "Assistant Professor (CE) Contract", photo: imgShilpaSingla },
+      { name: "Dr. Shilpa Singla", designation: "Assistant Professor (Civil) Contractual", photo: imgShilpaSingla },
     ],
   },
 ];

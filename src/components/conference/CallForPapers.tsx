@@ -5,10 +5,10 @@ import conferenceHall from "@/assets/conference-hall.jpg";
 import cmtQr from "@/assets/cmt-submission-qr.jpeg";
 
 const dates = [
-  { event: "Extended Abstract Submission", date: "July 31, 2026", active: true },
-  { event: "Acceptance Notification of Extended Abstract", date: "August 15, 2026" },
-  { event: "Submission of Full Paper", date: "September 30, 2026" },
-  { event: "Revised Paper Submission", date: "October 30, 2026" },
+  { event: "Extended Abstract Submission", date: "September 30, 2026", active: true },
+  { event: "Acceptance Notification of Extended Abstract", date: "October 15, 2026" },
+  { event: "Submission of Full Paper", date: "October 31, 2026" },
+  { event: "Revised Paper Submission", date: "November 15, 2026" },
   { event: "Conference Dates", date: "December 4–5, 2026", highlight: true },
 ];
 
@@ -199,8 +199,9 @@ const CallForPapers = () => {
                 </div>
               </div>
 
-              {/* Abstract Template Downloads */}
-              <div className="rounded-xl border border-border bg-muted/40 p-5">
+              {/* Manuscript Template Downloads */}
+              <div className="rounded-xl border border-border bg-muted/40 p-5 space-y-5">
+                <div>
                 <p className="font-heading font-bold text-foreground text-sm md:text-base mb-1">
                   Abstract Submission Template
                 </p>
@@ -224,6 +225,33 @@ const CallForPapers = () => {
                     <Download size={14} />
                     Download PDF
                   </a>
+                </div>
+                </div>
+                <div className="border-t border-border pt-5">
+                  <p className="font-heading font-bold text-foreground text-sm md:text-base mb-1">
+                    Full Paper Template
+                  </p>
+                  <p className="text-muted-foreground text-xs leading-relaxed mb-3">
+                    Download the official template and prepare your full-length paper accordingly.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <a
+                      href="/Full_Paper_Template_IESSD_26.docx"
+                      download
+                      className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-4 py-2 rounded-lg text-xs md:text-sm font-semibold hover:bg-accent/90 transition-colors"
+                    >
+                      <Download size={14} />
+                      Download Word (.docx)
+                    </a>
+                    <a
+                      href="/Full_Paper_Template_IESSD_26.pdf"
+                      download
+                      className="inline-flex items-center gap-2 bg-card border border-accent/40 text-foreground px-4 py-2 rounded-lg text-xs md:text-sm font-semibold hover:border-accent transition-colors"
+                    >
+                      <Download size={14} />
+                      Download PDF
+                    </a>
+                  </div>
                 </div>
               </div>
 

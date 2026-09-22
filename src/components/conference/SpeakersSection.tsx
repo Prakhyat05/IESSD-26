@@ -3,7 +3,6 @@ import { Mic, Globe, Flag, Users } from "lucide-react";
 import TechBackground from "./TechBackground";
 
 import jawahir from "@/assets/speakers/jawahir.jpg";
-import tuhin from "@/assets/speakers/tuhin.jpg";
 import navin from "@/assets/speakers/navin.jpg";
 import navneet from "@/assets/speakers/navneet.jpg";
 import ramana from "@/assets/speakers/ramana.jpg";
@@ -13,6 +12,10 @@ import sena from "@/assets/speakers/sena.jpg";
 import sangam from "@/assets/speakers/sangam.jpg";
 import premPal from "@/assets/speakers/prem-pal.jpg";
 import surendra from "@/assets/speakers/surendra.jpg";
+import amitKumarHaldarAsset from "@/assets/speakers/amit-kumar-haldar.jpg.asset.json";
+import christianGriffithsAsset from "@/assets/speakers/christian-griffiths.jpg.asset.json";
+import premPalUpdatedAsset from "@/assets/speakers/prem-pal-bansal-updated.jpg.asset.json";
+import surenderUpdatedAsset from "@/assets/speakers/surender-singh-updated.jpg.asset.json";
 
 type Speaker = {
   name: string;
@@ -46,10 +49,9 @@ const tracks: Track[] = [
         scope: "International",
       },
       {
-        name: "Dr. Tuhin Mukherjee",
-        affiliation: "Department of Mechanical Engineering, Iowa State University, USA",
-        email: "tuhinm@iastate.edu",
-        image: tuhin,
+        name: "Dr. Amit Kumar Haldar",
+        affiliation: "Department of Mechanical and Automobile Engineering, Technological University of the Shannon, Ireland",
+        image: amitKumarHaldarAsset.url,
         scope: "International",
       },
       {
@@ -99,6 +101,12 @@ const tracks: Track[] = [
     title: "Track 2 — Intelligent Robotics & Automation for Sustainable Systems",
     speakers: [
       {
+        name: "Dr. Christian Griffiths",
+        affiliation: "Department of Mechanical Engineering, Swansea University, Swansea, U.K.",
+        image: christianGriffithsAsset.url,
+        scope: "International",
+      },
+      {
         name: "Dr. Ramana Vinjamuri",
         affiliation:
           "Associate Professor, Computer Science & Electrical Engineering, University of Maryland, Baltimore County, USA",
@@ -143,43 +151,44 @@ const tracks: Track[] = [
     title: "Track 3 — Sustainable Innovations in Civil Engineering",
     speakers: [
       {
-        name: "Dr. Sena Tayfur, PhD",
-        affiliation: "Department of Civil Engineering, Ege University, 35100 Bornova, Izmir, Turkey",
+        name: "Dr. Sena TAYFUR",
+        affiliation: "Department of Civil Engineering, Ege University, Bornova, Izmir, Turkey",
         email: "sena.tayfur@ege.edu.tr",
         image: sena,
         scope: "International",
       },
       {
-        name: "Dr. Sangam Shrestha",
+        name: "Prof. Sangam Shrestha",
         affiliation:
-          "Professor, Water Engineering & Management; Co-Director, GWSC, Asian Institute of Technology (AIT), Thailand",
+          "Water Engineering and Management (WEM), Co-Director, Global Water & Sanitation Center (GWSC), Asian Institute of Technology (AIT), Bangkok",
         email: "sangam@ait.ac.th",
         image: sangam,
         scope: "International",
       },
       {
-        name: "Dr. Prem Pal Bansal",
-        affiliation: "Professor, Department of Civil Engineering, Thapar Institute of Engineering & Technology, Patiala",
+        name: "Prof. Prem Pal Bansal",
+        affiliation: "Department of Civil Engineering, Thapar Institute of Engineering & Technology (TIET), Patiala (Pb.), India",
         email: "ppbansal@thapar.edu",
-        image: surendra,
+        image: premPalUpdatedAsset.url,
         scope: "National",
       },
       {
-        name: "Dr. Surendra Singh",
-        affiliation: "Associate Professor, Department of Civil Engineering, IIT Madras",
+        name: "Dr. Surender Singh",
+        affiliation: "Department of Civil Engineering, Indian Institute of Technology Madras, India",
         email: "surender@iitm.ac.in",
-        image: premPal,
+        image: surenderUpdatedAsset.url,
         scope: "National",
       },
     ],
     international: [
-      { name: "Dr. Sena Tayfur", affiliation: "Ege University, Izmir, Turkey", email: "sena.tayfur@ege.edu.tr" },
+      { name: "Dr. Sena TAYFUR", affiliation: "Ege University, Bornova, Izmir, Turkey", email: "sena.tayfur@ege.edu.tr" },
+      { name: "Prof. Dr. Ivanka Netinger Grubeša", affiliation: "University North, Varaždin, Croatia" },
       { name: "Dr. Raju Sharma", affiliation: "University of Sherbrooke, Quebec, Canada", email: "Raju.Sharma@USherbrooke.ca" },
       { name: "Prof. Aruz Petcherdchoo", affiliation: "King Mongkut’s University of Technology, North Bangkok, Thailand", email: "aruz.p@eng.kmutnb.ac.th" },
       { name: "Dr. Ekbordin Winijkul", affiliation: "Dean, Faculty of Civil and Environmental Engineering, AIT, Bangkok, Thailand" },
       { name: "Prof. Atorod Azizinamini", affiliation: "Florida International University, USA", email: "aazizina@fiu.edu" },
       { name: "Prof. Piti Sukontasukkul", affiliation: "King Mongkut’s University of Technology, North Bangkok, Thailand" },
-      { name: "Dr. Sangam Shrestha", affiliation: "Asian Institute of Technology (AIT), Thailand", email: "sangam@ait.ac.th" },
+      { name: "Dr. Sangam Shrestha", affiliation: "Asian Institute of Technology (AIT), Bangkok, Thailand", email: "sangam@ait.ac.th" },
     ],
     national: [
       { name: "Dr. Prem Pal Bansal", affiliation: "Thapar Institute of Engineering & Technology, Patiala", email: "ppbansal@thapar.edu" },

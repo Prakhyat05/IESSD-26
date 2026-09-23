@@ -12,8 +12,8 @@ import sena from "@/assets/speakers/sena.jpg";
 import sangam from "@/assets/speakers/sangam.jpg";
 import premPal from "@/assets/speakers/prem-pal.jpg";
 import surendra from "@/assets/speakers/surendra.jpg";
-import amitKumarHaldarAsset from "@/assets/speakers/amit-kumar-haldar.jpg.asset.json";
-import christianGriffithsAsset from "@/assets/speakers/christian-griffiths.jpg.asset.json";
+import amitKumarHaldarAsset from "@/assets/speakers/amit-kumar-haldar.jpeg";
+import christianGriffithsAsset from "@/assets/speakers/christian-griffiths.jpeg";
 import premPalUpdatedAsset from "@/assets/speakers/prem-pal-bansal-updated.jpg.asset.json";
 import surenderUpdatedAsset from "@/assets/speakers/surender-singh-updated.jpg.asset.json";
 
@@ -51,7 +51,7 @@ const tracks: Track[] = [
       {
         name: "Dr. Amit Kumar Haldar",
         affiliation: "Department of Mechanical and Automobile Engineering, Technological University of the Shannon, Ireland",
-        image: amitKumarHaldarAsset.url,
+        image: amitKumarHaldarAsset,
         scope: "International",
       },
       {
@@ -103,7 +103,7 @@ const tracks: Track[] = [
       {
         name: "Dr. Christian Griffiths",
         affiliation: "Department of Mechanical Engineering, Swansea University, Swansea, U.K.",
-        image: christianGriffithsAsset.url,
+        image: christianGriffithsAsset,
         scope: "International",
       },
       {

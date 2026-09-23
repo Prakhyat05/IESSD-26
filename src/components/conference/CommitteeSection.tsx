@@ -76,13 +76,13 @@ const tracks: TrackData[] = [
     trackSubtitle: "Innovations and Sustainability in Civil Engineering",
     icon: Award,
     organizingSecretaries: [
-      { name: "Prof. Indraj Singh", designation: "Professor (ME)", photo: imgIndrajSingh },
-      { name: "Dr. Rakesh Kumar", designation: "Associate Professor (ME)", photo: imgRakeshKumar },
-      { name: "Dr. Sumit Kumar", designation: "Assistant Professor (ME)", photo: imgSumitKumar },
+      { name: "Prof. Indraj Singh", designation: "ME", photo: imgIndrajSingh },
+      { name: "Dr. Rakesh Kumar", designation: "AsP (ME)", photo: imgRakeshKumar },
+      { name: "Dr. Sumit Kumar", designation: "AP (ME)", photo: imgSumitKumar },
     ],
     jointSecretaries: [
-      { name: "Dr. Yogesh Verma", designation: "Assistant Professor (ME)", photo: imgYogeshVerma },
-      { name: "Dr. Shilpa Singla", designation: "Assistant Professor (Civil) Contractual", photo: imgShilpaSingla },
+      { name: "Dr. Yogesh Verma", designation: "AP (ME)", photo: imgYogeshVerma },
+      { name: "Dr. Shilpa Singla", designation: "AP (Civil) Contractual", photo: imgShilpaSingla },
     ],
   },
 ];

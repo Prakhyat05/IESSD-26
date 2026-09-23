@@ -148,7 +148,7 @@ const tracks: Track[] = [
   },
   {
     id: "track-3",
-    title: "Track 3 — Sustainable Innovations in Civil Engineering",
+    title: "Track 3 — Innovations and Sustainability in Civil Engineering",
     speakers: [
       {
         name: "Dr. Sena TAYFUR",

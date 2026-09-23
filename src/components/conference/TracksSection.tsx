@@ -45,7 +45,7 @@ const tracks = [
   {
     icon: Building2,
     title: "Track 3",
-    name: "Sustainability in Civil Engineering",
+    name: "Innovations and Sustainability in Civil Engineering",
     img: trackCivil,
     topics: [
       "Sustainable Construction Materials",

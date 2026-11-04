@@ -11,6 +11,7 @@ import CommitteeSection from "@/components/conference/CommitteeSection";
 import SpeakersSection from "@/components/conference/SpeakersSection";
 import VenueSection from "@/components/conference/VenueSection";
 import ContactSection from "@/components/conference/ContactSection";
+import DeveloperCredit from "@/components/conference/DeveloperCredit";
 import Footer from "@/components/conference/Footer";
 
 // Module-scoped flag: persists across route changes within a single page load,
@@ -42,6 +43,7 @@ const Index = () => {
       <CommitteeSection />
       <VenueSection />
       <ContactSection />
+      <DeveloperCredit />
       <Footer />
     </>
   );

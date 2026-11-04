@@ -44,7 +44,7 @@ const tracks: Track[] = [
         name: "Prof. Javaid Butt",
         affiliation:
           "Professor of Additive and Sustainable Manufacturing, College of Creative Arts, Technology, and Engineering, Bucks New University, Buckinghamshire, High Wycombe, UK",
-        image: javaidButtAsset,
+        image: javaidButtAsset.url,
         scope: "International",
       },
       {

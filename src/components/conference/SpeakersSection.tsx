@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Mic, Globe, Flag, Users } from "lucide-react";
 import TechBackground from "./TechBackground";
 
-import javaidButtAsset from "@/assets/speakers/javaid-butt.jpg.asset.json";
+import javaidButtAsset from "@/assets/speakers/javaid-butt.jpg";
 import navin from "@/assets/speakers/navin.jpg";
 import navneet from "@/assets/speakers/navneet.jpg";
 import ramana from "@/assets/speakers/ramana.jpg";
@@ -44,7 +44,7 @@ const tracks: Track[] = [
         name: "Prof. Javaid Butt",
         affiliation:
           "Professor of Additive and Sustainable Manufacturing, College of Creative Arts, Technology, and Engineering, Bucks New University, Buckinghamshire, High Wycombe, UK",
-        image: javaidButtAsset.url,
+        image: javaidButtAsset,
         scope: "International",
       },
       {

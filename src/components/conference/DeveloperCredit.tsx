@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Sparkles, Code2 } from "lucide-react";
-import developerAsset from "@/assets/prakhyat-prakhar.jpg.asset.json";
+import developerAsset from "@/assets/prakhyat-prakhar.jpg";
 
 const DeveloperCredit = () => {
   return (
@@ -44,7 +44,7 @@ const DeveloperCredit = () => {
                   style={{ background: "linear-gradient(135deg, hsl(160, 65%, 50%), hsl(210, 70%, 60%))" }}
                 />
                 <img
-                  src={developerAsset.url}
+                  src={developerAsset}
                   alt="Prakhyat Prakhar"
                   loading="lazy"
                   width={1024}

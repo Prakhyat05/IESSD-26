@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Mic, Globe, Flag, Users } from "lucide-react";
 import TechBackground from "./TechBackground";
 
-import jawahir from "@/assets/speakers/jawahir.jpg";
+import javaidButtAsset from "@/assets/speakers/javaid-butt.jpg.asset.json";
 import navin from "@/assets/speakers/navin.jpg";
 import navneet from "@/assets/speakers/navneet.jpg";
 import ramana from "@/assets/speakers/ramana.jpg";
@@ -41,11 +41,10 @@ const tracks: Track[] = [
     title: "Track 1 — Innovations in Smart Manufacturing",
     speakers: [
       {
-        name: "Dr. I. S. Jawahir",
+        name: "Prof. Javaid Butt",
         affiliation:
-          "Professor & Director, Institute for Sustainable Manufacturing, Dept. of Mechanical and Aerospace Engineering, University of Kentucky, USA",
-        email: "is.jawahir@uky.edu",
-        image: jawahir,
+          "Professor of Additive and Sustainable Manufacturing, College of Creative Arts, Technology, and Engineering, Bucks New University, Buckinghamshire, High Wycombe, UK",
+        image: javaidButtAsset,
         scope: "International",
       },
       {
@@ -71,7 +70,7 @@ const tracks: Track[] = [
       },
     ],
     international: [
-      { name: "Dr. I. S. Jawahir", affiliation: "University of Kentucky, USA", email: "is.jawahir@uky.edu" },
+      { name: "Prof. Javaid Butt", affiliation: "College of Creative Arts, Technology & Engineering, Bucks New University, UK" },
       { name: "Dr. Álisson Rocha Machado", affiliation: "Pontifícia Universidade Católica do Paraná, Brazil", email: "alisson.rocha@pucpr.br" },
       { name: "Dr. Alper Uysal", affiliation: "Yıldız Technical University, Turkey", email: "auysal@yildiz.edu.tr" },
       { name: "Dr. Suresh Palanisamy", affiliation: "Swinburne University of Technology, Australia", email: "spalanisamy@swin.edu.au" },
@@ -111,7 +110,7 @@ const tracks: Track[] = [
         affiliation:
           "Associate Professor, Computer Science & Electrical Engineering, University of Maryland, Baltimore County, USA",
         email: "rvinjam1@umbc.edu",
-        image: ramana,
+        image: deepak,
         scope: "International",
       },
       {
@@ -125,7 +124,7 @@ const tracks: Track[] = [
         name: "Prof. Deepak Sharma",
         affiliation: "Department of Mechanical Engineering, IIT Guwahati, India",
         email: "dsharma@iitg.ac.in",
-        image: deepak,
+        image: ramana,
         scope: "National",
       },
     ],

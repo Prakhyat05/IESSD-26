@@ -10,7 +10,7 @@ import logoIce from "@/assets/logo-ice.jpeg";
 import logoAtmanirbhar from "@/assets/logo-atmanirbhar.png";
 
 const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfMWCNK4A-WriIz0HZ8iW8CFZTVhR7grSxkQmUJUqb_smHBcA/viewform";
-const targetDate = new Date("2026-09-30T23:59:59+05:30").getTime();
+const targetDate = new Date("2026-11-30T23:59:59+05:30").getTime();
 
 /* Floating 3D-style geometric shapes */
 const FloatingShape = ({ delay, x, y, size, shape }: { delay: number; x: string; y: string; size: number; shape: "hex" | "tri" | "diamond" }) => {
@@ -278,7 +278,7 @@ const HeroSection = () => {
           className="mb-10"
         >
           <p className="text-xs uppercase tracking-[0.2em] mb-5 font-semibold" style={{ color: "hsl(160, 60%, 55%)" }}>
-            Extended Abstract Submission Deadline
+            Extended Abstract/Full Paper Submission Deadline
           </p>
           <div className="flex justify-center gap-3 md:gap-6">
             {[

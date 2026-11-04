@@ -5,10 +5,8 @@ import conferenceHall from "@/assets/conference-hall.jpg";
 import cmtQr from "@/assets/cmt-submission-qr.jpeg";
 
 const dates = [
-  { event: "Extended Abstract Submission", date: "September 30, 2026", active: true },
-  { event: "Acceptance Notification of Extended Abstract", date: "October 15, 2026" },
-  { event: "Submission of Full Paper", date: "October 31, 2026" },
-  { event: "Revised Paper Submission", date: "November 15, 2026" },
+  { event: "Extended Abstract/Full Paper Submission", date: "November 30, 2026 (Extended)", active: true },
+  { event: "Revised Paper Submission", date: "December 2, 2026" },
   { event: "Conference Dates", date: "December 4–5, 2026", highlight: true },
 ];
 

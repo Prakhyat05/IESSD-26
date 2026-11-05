@@ -1,0 +1,2 @@
+- [x] Refresh the developer credit with restrained animation and a LinkedIn profile link.
+- [x] Replace the conference brochure and verify the downloaded PDF.

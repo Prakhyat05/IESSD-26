@@ -3,13 +3,13 @@ import { Mic, Globe, Flag, Users } from "lucide-react";
 import TechBackground from "./TechBackground";
 
 import javaidButtAsset from "@/assets/speakers/javaid-butt.jpg";
+import christianPagliaAsset from "@/assets/speakers/christian-paglia-nov-2026.jpeg.asset.json";
 import navin from "@/assets/speakers/navin.jpg";
 import navneet from "@/assets/speakers/navneet.jpg";
 import ramana from "@/assets/speakers/ramana.jpg";
 import pushparaj from "@/assets/speakers/pushparaj.jpg";
 import deepak from "@/assets/speakers/deepak.jpg";
 import sena from "@/assets/speakers/sena.jpg";
-import sangam from "@/assets/speakers/sangam.jpg";
 import premPal from "@/assets/speakers/prem-pal.jpg";
 import surendra from "@/assets/speakers/surendra.jpg";
 import amitKumarHaldarAsset from "@/assets/speakers/amit-kumar-haldar.jpeg";
@@ -157,11 +157,11 @@ const tracks: Track[] = [
         scope: "International",
       },
       {
-        name: "Prof. Sangam Shrestha",
+        name: "Dr. Christian Paglia",
         affiliation:
-          "Water Engineering and Management (WEM), Co-Director, Global Water & Sanitation Center (GWSC), Asian Institute of Technology (AIT), Bangkok",
-        email: "sangam@ait.ac.th",
-        image: sangam,
+          "Department of Environment Constructions and Design, University of Applied Sciences and Arts of Southern Switzerland",
+        email: "christian.paglia@supsi.ch",
+        image: christianPagliaAsset.url,
         scope: "International",
       },
       {
@@ -187,7 +187,6 @@ const tracks: Track[] = [
       { name: "Dr. Ekbordin Winijkul", affiliation: "Dean, Faculty of Civil and Environmental Engineering, AIT, Bangkok, Thailand" },
       { name: "Prof. Atorod Azizinamini", affiliation: "Florida International University, USA", email: "aazizina@fiu.edu" },
       { name: "Prof. Piti Sukontasukkul", affiliation: "King Mongkut’s University of Technology, North Bangkok, Thailand" },
-      { name: "Dr. Sangam Shrestha", affiliation: "Asian Institute of Technology (AIT), Bangkok, Thailand", email: "sangam@ait.ac.th" },
     ],
     national: [
       { name: "Dr. Prem Pal Bansal", affiliation: "Thapar Institute of Engineering & Technology, Patiala", email: "ppbansal@thapar.edu" },

@@ -44,12 +44,14 @@ const tracks: Track[] = [
         name: "Prof. Javaid Butt",
         affiliation:
           "Professor of Additive and Sustainable Manufacturing, College of Creative Arts, Technology, and Engineering, Bucks New University, Buckinghamshire, High Wycombe, UK",
+        email: "Javaid.Butt@bnu.ac.uk",
         image: javaidButtAsset,
         scope: "International",
       },
       {
         name: "Dr. Amit Kumar Haldar",
         affiliation: "Department of Mechanical and Automobile Engineering, Technological University of the Shannon, Ireland",
+        email: "amit.haldar@tus.ie",
         image: amitKumarHaldarAsset,
         scope: "International",
       },
@@ -70,7 +72,7 @@ const tracks: Track[] = [
       },
     ],
     international: [
-      { name: "Prof. Javaid Butt", affiliation: "College of Creative Arts, Technology & Engineering, Bucks New University, UK" },
+      { name: "Prof. Javaid Butt", affiliation: "College of Creative Arts, Technology & Engineering, Bucks New University, UK", email: "Javaid.Butt@bnu.ac.uk" },
       { name: "Dr. Álisson Rocha Machado", affiliation: "Pontifícia Universidade Católica do Paraná, Brazil", email: "alisson.rocha@pucpr.br" },
       { name: "Dr. Alper Uysal", affiliation: "Yıldız Technical University, Turkey", email: "auysal@yildiz.edu.tr" },
       { name: "Dr. Suresh Palanisamy", affiliation: "Swinburne University of Technology, Australia", email: "spalanisamy@swin.edu.au" },
@@ -102,6 +104,7 @@ const tracks: Track[] = [
       {
         name: "Dr. Christian Griffiths",
         affiliation: "Department of Mechanical Engineering, Swansea University, Swansea, U.K.",
+        email: "c.a.griffiths@swansea.ac.uk",
         image: christianGriffithsAsset,
         scope: "International",
       },

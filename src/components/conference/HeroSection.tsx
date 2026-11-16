@@ -8,9 +8,10 @@ import logoIei from "@/assets/logo-iei.jpeg";
 import logoIessd from "@/assets/logo-iessd.png";
 import logoIce from "@/assets/logo-ice.jpeg";
 import logoAtmanirbhar from "@/assets/logo-atmanirbhar.png";
+import { SUBMISSION_DEADLINE_TIMESTAMP } from "@/lib/conference-dates";
 
 const REGISTRATION_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfMWCNK4A-WriIz0HZ8iW8CFZTVhR7grSxkQmUJUqb_smHBcA/viewform";
-const targetDate = new Date("2026-11-30T23:59:59+05:30").getTime();
+const targetDate = SUBMISSION_DEADLINE_TIMESTAMP;
 
 /* Floating 3D-style geometric shapes */
 const FloatingShape = ({ delay, x, y, size, shape }: { delay: number; x: string; y: string; size: number; shape: "hex" | "tri" | "diamond" }) => {

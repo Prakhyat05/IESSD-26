@@ -1,0 +1,1 @@
+Keep the submission deadline label and countdown timestamp in `src/lib/conference-dates.ts` so both page displays stay synchronized.

@@ -3,9 +3,10 @@ import { FileText, Mail, BookOpen, Clock, ArrowRight, CheckCircle, Send, Edit, S
 import TechBackground from "./TechBackground";
 import conferenceHall from "@/assets/conference-hall.jpg";
 import cmtQr from "@/assets/cmt-submission-qr.jpeg";
+import { SUBMISSION_DEADLINE_LABEL } from "@/lib/conference-dates";
 
 const dates = [
-  { event: "Extended Abstract/Full Paper Submission", date: "November 30, 2026 (Extended)", active: true },
+  { event: "Extended Abstract/Full Paper Submission", date: SUBMISSION_DEADLINE_LABEL, active: true },
   { event: "Revised Paper Submission", date: "December 2, 2026" },
   { event: "Conference Dates", date: "December 4–5, 2026", highlight: true },
 ];

@@ -3,7 +3,7 @@ import { Mic, Globe, Flag, Users } from "lucide-react";
 import TechBackground from "./TechBackground";
 
 import javaidButtAsset from "@/assets/speakers/javaid-butt.jpg";
-import christianPagliaAsset from "@/assets/speakers/christian-paglia-nov-2026.jpeg.asset.json";
+import christianPagliaAsset from "@/assets/speakers/christian-paglia.jpeg.asset.json";
 import navin from "@/assets/speakers/navin.jpg";
 import navneet from "@/assets/speakers/navneet.jpg";
 import ramana from "@/assets/speakers/ramana.jpg";

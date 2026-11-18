@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "homepage": "https://iessd26.com/",
-  "description": "Official Website for the International Conference on Innovative Engineering Solutions for Sustainable Development (IESSD'26)",
+  "description": "Official Website for the International Conference on Innovative Engineering Solutions for Sustainable Development (IESSD'26) - https://iessd26.com/",
   "type": "module",
   "scripts": {
     "dev": "vite",

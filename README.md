@@ -7,6 +7,8 @@
 **Sant Longowal Institute of Engineering & Technology (SLIET), Longowal, Punjab, India**  
 *(Deemed-to-be-University under MoE, Government of India)*
 
+> 🚀 **Official Live Portal:** [**https://iessd26.com/**](https://iessd26.com/)
+
 [![Live Website](https://img.shields.io/badge/Live_Website-iessd26.com-00C781?style=for-the-badge&logo=googlechrome&logoColor=white)](https://iessd26.com/)
 
 [![React](https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react&logoColor=white)](https://react.dev/)
@@ -49,9 +51,11 @@
 
 ## 🏛 About the Conference
 
+> 🌐 **Official Live Portal:** [**https://iessd26.com/**](https://iessd26.com/) — Access full conference tracks, keynote schedules, paper templates, author guidelines, and online registration.
+
 **IESSD'26** is a prestigious multi-track international conference jointly organized by the **Department of Mechanical Engineering** and the **Department of Civil Engineering** at **Sant Longowal Institute of Engineering & Technology (SLIET)**, Longowal, Punjab, India.
 
-The conference serves as a global forum uniting leading academic scientists, researchers, scholars, and industry professionals to deliberate on pioneering advancements and address global challenges in engineering. With a strong commitment to the United Nations Sustainable Development Goals (SDGs), IESSD'26 bridges theoretical discoveries with scalable, eco-friendly, and commercially viable solutions across smart manufacturing, intelligent robotics, and sustainable infrastructure.
+Hosted live on the web at [**https://iessd26.com/**](https://iessd26.com/), the conference serves as a global forum uniting leading academic scientists, researchers, scholars, and industry professionals to deliberate on pioneering advancements and address global challenges in engineering. With a strong commitment to the United Nations Sustainable Development Goals (SDGs), IESSD'26 bridges theoretical discoveries with scalable, eco-friendly, and commercially viable solutions across smart manufacturing, intelligent robotics, and sustainable infrastructure.
 
 ### Organizing Institutions & Collaborations
 - **Host Institution:** Sant Longowal Institute of Engineering & Technology (SLIET), Longowal (Deemed-to-be-University under MoE, Govt. of India)

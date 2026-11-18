@@ -3,7 +3,7 @@ import { Mic, Globe, Flag, Users } from "lucide-react";
 import TechBackground from "./TechBackground";
 
 import javaidButtAsset from "@/assets/speakers/javaid-butt.jpg";
-import christianPagliaAsset from "@/assets/speakers/christian-paglia.jpeg.jpeg";
+import christianPagliaAsset from "@/assets/speakers/christian-paglia.jpeg";
 import navin from "@/assets/speakers/navin.jpg";
 import navneet from "@/assets/speakers/navneet.jpg";
 import ramana from "@/assets/speakers/ramana.jpg";
@@ -14,8 +14,6 @@ import premPal from "@/assets/speakers/prem-pal.jpg";
 import surendra from "@/assets/speakers/surendra.jpg";
 import amitKumarHaldarAsset from "@/assets/speakers/amit-kumar-haldar.jpeg";
 import christianGriffithsAsset from "@/assets/speakers/christian-griffiths.jpeg";
-import premPalUpdatedAsset from "@/assets/speakers/prem-pal-bansal-updated.jpg.asset.json";
-import surenderUpdatedAsset from "@/assets/speakers/surender-singh-updated.jpg.asset.json";
 
 type Speaker = {
   name: string;

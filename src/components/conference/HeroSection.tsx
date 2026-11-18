@@ -188,7 +188,9 @@ const HeroSection = () => {
           <p className="font-heading text-3xl md:text-4xl font-extrabold mt-5 tracking-wide drop-shadow-lg" style={{ color: "hsl(160, 80%, 55%)" }}>
             IESSD'26
           </p>
-          <p className="text-sm mt-2 font-medium tracking-wider" style={{ color: "hsl(0, 0%, 85%)" }}>(Hybrid Mode)</p>
+          <p className="text-sm mt-2 font-medium tracking-wider" style={{ color: "hsl(0, 0%, 85%)" }}>
+            (Hybrid Mode) • <a href="https://iessd26.com/" className="hover:underline text-accent">iessd26.com</a>
+          </p>
         </motion.div>
 
         {/* Info pills */}

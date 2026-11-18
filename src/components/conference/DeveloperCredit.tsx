@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Linkedin } from "lucide-react";
+import { ArrowUpRight, Linkedin, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import developerAsset from "@/assets/prakhyat-prakhar.jpg";
 
@@ -35,7 +35,15 @@ const DeveloperCredit = () => {
                 Prakhyat Prakhar
               </h2>
               <p className="mt-1 text-sm text-foreground">
-                Designed &amp; developed for IESSD’26
+                Designed &amp; developed for IESSD’26 •{" "}
+                <a
+                  href="https://iessd26.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline font-medium"
+                >
+                  https://iessd26.com
+                </a>
               </p>
               <motion.div
                 initial={prefersReducedMotion ? false : { scaleX: 0 }}
@@ -46,7 +54,19 @@ const DeveloperCredit = () => {
               />
             </div>
           </div>
-          <div className="flex items-center justify-center border-t border-border p-5 md:h-full md:border-l md:border-t-0 md:px-8">
+          <div className="flex flex-wrap items-center justify-center gap-3 border-t border-border p-5 md:h-full md:border-l md:border-t-0 md:px-8">
+            <Button asChild variant="outline" className="gap-2">
+              <a
+                href="https://iessd26.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open IESSD'26 live official website in a new tab"
+              >
+                <Globe aria-hidden="true" size={16} />
+                Live Website
+                <ArrowUpRight aria-hidden="true" size={14} />
+              </a>
+            </Button>
             <Button asChild variant="outline" className="gap-2">
               <a
                 href="https://www.linkedin.com/in/prakhyat-prakhar/"
@@ -54,9 +74,9 @@ const DeveloperCredit = () => {
                 rel="noopener noreferrer"
                 aria-label="Open Prakhyat Prakhar’s LinkedIn profile in a new tab"
               >
-                <Linkedin aria-hidden="true" />
+                <Linkedin aria-hidden="true" size={16} />
                 LinkedIn
-                <ArrowUpRight aria-hidden="true" />
+                <ArrowUpRight aria-hidden="true" size={14} />
               </a>
             </Button>
           </div>

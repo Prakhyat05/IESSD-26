@@ -187,7 +187,7 @@ const MemberCard = ({ name, designation, photo, roleLabel }: { name: string; des
 
 const CommitteeSection = () => {
   return (
-    <section className="section-padding bg-background relative overflow-hidden">
+    <section id="committee" className="section-padding bg-background relative overflow-hidden">
       <TechBackground />
 
       <div className="container mx-auto max-w-6xl relative z-10">

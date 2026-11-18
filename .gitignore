@@ -1,3 +1,23 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Production build
+dist
+dist-ssr
+
+# Environment and sensitive files
+.env
+.env.*
+.env*.local
+*.local
+*.pem
+*.key
+*.cert
+*.pfx
+*.p12
+
 # Logs
 logs
 *.log
@@ -7,16 +27,17 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Testing & Coverage
+coverage
+playwright-report
+test-results
 
-# Editor directories and files
+# Editor and OS
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj

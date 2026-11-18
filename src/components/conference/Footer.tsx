@@ -40,7 +40,16 @@ const Footer = () => {
             Organized by Sant Longowal Institute of Engineering & Technology, Longowal-148106, Sangrur, Punjab, India (Deemed-to-be-University under MoE, Govt. of India)
           </p>
           <p className="text-secondary-foreground/50 text-xs mt-2">
-            © 2026 SLIET, Longowal. All rights reserved.
+            Official Conference Website:{" "}
+            <a
+              href="https://iessd26.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:underline font-semibold"
+            >
+              https://iessd26.com
+            </a>
+            {" "}• © 2026 SLIET, Longowal. All rights reserved.
           </p>
           <p className="text-secondary-foreground/50 text-xs mt-4 max-w-3xl mx-auto leading-relaxed">
             The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.

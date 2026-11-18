@@ -50,13 +50,21 @@ const AboutSection = () => {
           <p className="text-foreground leading-relaxed text-sm pl-[52px] mb-4">
             IESSD'26, a Multi-Track International Conference to be organized by Department of Mechanical Engineering and Department of Civil Engineering at Sant Longowal Institute of Engineering and Technology (SLIET), Longowal during December 4th & 5th, 2026. The aim of the conference is to provide an international podium to do extensive deliberations on latest development in the areas of Mechanical and Civil Engineering which will be useful to academia, Industry and society at large.
           </p>
-          <div className="pl-[52px]">
+          <div className="pl-[52px] flex flex-wrap gap-3 items-center">
             <a
               href="/IESSD26-Brochure.pdf"
               download="IESSD26-Brochure.pdf"
               className="inline-flex items-center gap-2 bg-accent/10 hover:bg-accent/20 border border-accent/30 text-accent font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
             >
               📄 Download Conference Brochure (PDF)
+            </a>
+            <a
+              href="https://iessd26.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-card hover:bg-accent/10 border border-border text-foreground font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
+            >
+              🌐 Official Portal: iessd26.com
             </a>
           </div>
         </motion.div>

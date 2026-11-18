@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://iessd26.com/sitemap.xml
+Host: https://iessd26.com

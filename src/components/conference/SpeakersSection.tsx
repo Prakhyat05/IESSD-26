@@ -21,6 +21,7 @@ type Speaker = {
   name: string;
   affiliation: string;
   email?: string;
+  talk: string;
   image: string;
   scope: "International" | "National";
 };
@@ -45,6 +46,7 @@ const tracks: Track[] = [
         affiliation:
           "Professor of Additive and Sustainable Manufacturing, College of Creative Arts, Technology, and Engineering, Bucks New University, Buckinghamshire, High Wycombe, UK",
         email: "Javaid.Butt@bnu.ac.uk",
+        talk: "Digital Twin for Additive Manufacturing: Predicting Part Quality with Multi-Physics Simulation and Machine Learning",
         image: javaidButtAsset,
         scope: "International",
       },
@@ -52,6 +54,7 @@ const tracks: Track[] = [
         name: "Dr. Amit Kumar Haldar",
         affiliation: "Department of Mechanical and Automobile Engineering, Technological University of the Shannon, Ireland",
         email: "amit.haldar@tus.ie",
+        talk: "Materials Innovation, Advanced Manufacturing and the Future of Sustainable Hydrogen Storage Technologies",
         image: amitKumarHaldarAsset,
         scope: "International",
       },
@@ -59,6 +62,7 @@ const tracks: Track[] = [
         name: "Dr. Navin Kumar",
         affiliation: "Professor, Department of Mechanical Engineering, IIT Ropar, India",
         email: "nkumar@iitrpr.ac.in",
+        talk: "Assessment Tools and Devices for Biomedical Applications",
         image: navin,
         scope: "National",
       },
@@ -67,6 +71,7 @@ const tracks: Track[] = [
         affiliation:
           "Associate Professor, Mechanical & Aero-space Engineering, IITRAM, Ahmedabad, India",
         email: "navneetkhanna@iitram.ac.in",
+        talk: "Sustainability, Lifecycle Analysis and Deep Learning AI in Manufacturing",
         image: navneet,
         scope: "National",
       },
@@ -105,6 +110,7 @@ const tracks: Track[] = [
         name: "Dr. Christian Griffiths",
         affiliation: "Department of Mechanical Engineering, Swansea University, Swansea, U.K.",
         email: "c.a.griffiths@swansea.ac.uk",
+        talk: "Industry 5.0 and Cobots",
         image: christianGriffithsAsset,
         scope: "International",
       },
@@ -113,6 +119,7 @@ const tracks: Track[] = [
         affiliation:
           "Associate Professor, Computer Science & Electrical Engineering, University of Maryland, Baltimore County, USA",
         email: "rvinjam1@umbc.edu",
+        talk: "Synergy-Based Brain-Machine Interfaces for Human-Robot Collaboration and Neuroadaptive Technologies",
         image: deepak,
         scope: "International",
       },
@@ -120,6 +127,7 @@ const tracks: Track[] = [
         name: "Prof. Pushparaj Mani Pathak",
         affiliation: "Department of Mechanical & Industrial Engineering, IIT Roorkee, India",
         email: "pushparaj.pathak@me.iitr.ac.in",
+        talk: "Humanoid Robots for Hospitals",
         image: pushparaj,
         scope: "National",
       },
@@ -127,6 +135,7 @@ const tracks: Track[] = [
         name: "Prof. Deepak Sharma",
         affiliation: "Department of Mechanical Engineering, IIT Guwahati, India",
         email: "dsharma@iitg.ac.in",
+        talk: "Optimization Using Evolutionary Algorithms and Applications",
         image: ramana,
         scope: "National",
       },
@@ -156,6 +165,7 @@ const tracks: Track[] = [
         name: "Dr. Sena TAYFUR",
         affiliation: "Department of Civil Engineering, Ege University, Bornova, Izmir, Turkey",
         email: "sena.tayfur@ege.edu.tr",
+        talk: "Reliable Monitoring and Diagnosis: Non-Destructive Testing for Sustainable Civil Infrastructure",
         image: sena,
         scope: "International",
       },
@@ -164,6 +174,7 @@ const tracks: Track[] = [
         affiliation:
           "Department of Environment Constructions and Design, University of Applied Sciences and Arts of Southern Switzerland",
         email: "christian.paglia@supsi.ch",
+        talk: "Sustainability of Cement-Based Materials and Future Challenges",
         image: christianPagliaAsset,
         scope: "International",
       },
@@ -171,6 +182,7 @@ const tracks: Track[] = [
         name: "Prof. Prem Pal Bansal",
         affiliation: "Department of Civil Engineering, Thapar Institute of Engineering & Technology (TIET), Patiala (Pb.), India",
         email: "ppbansal@thapar.edu",
+        talk: "Retrofitting of Structures",
         image: surendra,
         scope: "National",
       },
@@ -178,6 +190,7 @@ const tracks: Track[] = [
         name: "Dr. Surender Singh",
         affiliation: "Department of Civil Engineering, Indian Institute of Technology Madras, India",
         email: "surender@iitm.ac.in",
+        talk: "Rethinking Construction Material: Pathways to a Circular and Low Carbon Future",
         image: premPal,
         scope: "National",
       },
@@ -244,6 +257,10 @@ const SpeakerCard = ({ s, i }: { s: Speaker; i: number }) => (
           {s.email}
         </a>
       )}
+      <div className="mt-4 border-t border-border pt-3">
+        <p className="text-foreground text-xs font-semibold mb-1">Expert Talk</p>
+        <p className="text-foreground text-xs leading-relaxed">{s.talk}</p>
+      </div>
     </div>
   </motion.div>
 );

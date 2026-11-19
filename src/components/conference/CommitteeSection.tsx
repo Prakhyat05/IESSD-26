@@ -63,8 +63,8 @@ const tracks: TrackData[] = [
     trackSubtitle: "Intelligent Robotics & Automation for Sustainable Systems",
     icon: Shield,
     organizingSecretaries: [
-      { name: "Prof. R. K. Saxena", designation: "Professor (ME)", photo: imgRKSaxena },
       { name: "Dr. Sunil Kumar", designation: "Associate Professor (ME)", photo: imgSunilKumar },
+      { name: "Prof. R. K. Saxena", designation: "Professor (ME)", photo: imgRKSaxena },
     ],
     jointSecretaries: [
       { name: "Dr. Vivek Kumar", designation: "Associate Professor (ME)", photo: imgVivekKumar },
@@ -77,12 +77,12 @@ const tracks: TrackData[] = [
     icon: Award,
     organizingSecretaries: [
       { name: "Prof. Indraj Singh", designation: "ME", photo: imgIndrajSingh },
-      { name: "Dr. Rakesh Kumar", designation: "AsP (ME)", photo: imgRakeshKumar },
       { name: "Dr. Sumit Kumar", designation: "AP (ME)", photo: imgSumitKumar },
+      { name: "Dr. Rakesh Kumar", designation: "AsP (ME)", photo: imgRakeshKumar },
     ],
     jointSecretaries: [
-      { name: "Dr. Yogesh Verma", designation: "AP (ME)", photo: imgYogeshVerma },
       { name: "Dr. Shilpa Singla", designation: "AP (Civil) Contractual", photo: imgShilpaSingla },
+      { name: "Dr. Yogesh Verma", designation: "AP (ME)", photo: imgYogeshVerma },
     ],
   },
 ];

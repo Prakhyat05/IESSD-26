@@ -157,11 +157,11 @@ Hosted live on the web at [**https://iessd26.com/**](https://iessd26.com/), the 
   - *Organizing Secretaries:* Dr. Anil Kumar Singla (AsP, ME), Dr. Anuj Bansal (AP, ME)
   - *Joint Secretaries:* Er. Jonny Singla (AP, ME), Er. Divesh Bharti (AP, ME)
 - **Track 2 (Robotics & Automation):**
-  - *Organizing Secretaries:* Prof. R. K. Saxena (Professor, ME), Dr. Sunil Kumar (AsP, ME)
+  - *Organizing Secretaries:* Dr. Sunil Kumar (AsP, ME), Prof. R. K. Saxena (Professor, ME)
   - *Joint Secretaries:* Dr. Vivek Kumar (AsP, ME), Er. Lalit Ahuja (AP, ME)
 - **Track 3 (Civil Engineering):**
-  - *Organizing Secretaries:* Prof. Indraj Singh (ME), Dr. Rakesh Kumar (AsP, ME), Dr. Sumit Kumar (AP, ME)
-  - *Joint Secretaries:* Dr. Yogesh Verma (AP, ME), Dr. Shilpa Singla (AP, Civil)
+  - *Organizing Secretaries:* Prof. Indraj Singh (ME), Dr. Sumit Kumar (AP, ME), Dr. Rakesh Kumar (AsP, ME)
+  - *Joint Secretaries:* Dr. Shilpa Singla (AP, Civil), Dr. Yogesh Verma (AP, ME)
 
 ---
 

@@ -152,7 +152,7 @@ const tracks: Track[] = [
       { name: "Prof. Joseph Anand Vaz", affiliation: "Dr. B. R. Ambedkar NIT, Jalandhar", email: "anandvaz@nitj.ac.in" },
       { name: "Prof. Mohammed Suhaib", affiliation: "Jamia Millia Islamia, New Delhi", email: "msuhaib@jmi.ac.in" },
       { name: "Dr. Ravi Kumar Mandava", affiliation: "IIITDM Kurnool, Andhra Pradesh", email: "ravikumar1013@iiitk.ac.in" },
-      { name: "Mr. Aditya Marathe", affiliation: "CEO & Founder, NUGENIX ROBOTICS, Ichalkaranji, Maharashtra" },
+      { name: "Mr. Aditya Marathe", affiliation: "CEO & Founder, NUGENIX ROBOTICS, Ichalkaranji, Maharashtra", email: "aditya@nugenix.co.in" },
     ],
   },
   {
@@ -195,12 +195,12 @@ const tracks: Track[] = [
     ],
     international: [
       { name: "Dr. Sena TAYFUR", affiliation: "Ege University, Bornova, Izmir, Turkey", email: "sena.tayfur@ege.edu.tr" },
-      { name: "Prof. Dr. Ivanka Netinger Grubeša", affiliation: "University North, Varaždin, Croatia" },
+      { name: "Prof. Dr. Ivanka Netinger Grubeša", affiliation: "University North, Varaždin, Croatia", email: "inetinger@unin.hr" },
       { name: "Dr. Raju Sharma", affiliation: "University of Sherbrooke, Quebec, Canada", email: "Raju.Sharma@USherbrooke.ca" },
       { name: "Prof. Aruz Petcherdchoo", affiliation: "King Mongkut’s University of Technology, North Bangkok, Thailand", email: "aruz.p@eng.kmutnb.ac.th" },
       { name: "Dr. Ekbordin Winijkul", affiliation: "Dean, Faculty of Civil and Environmental Engineering, AIT, Bangkok, Thailand" },
       { name: "Prof. Atorod Azizinamini", affiliation: "Florida International University, USA", email: "aazizina@fiu.edu" },
-      { name: "Prof. Piti Sukontasukkul", affiliation: "King Mongkut’s University of Technology, North Bangkok, Thailand" },
+      { name: "Prof. Piti Sukontasukkul", affiliation: "King Mongkut’s University of Technology, North Bangkok, Thailand", email: "piti.kmutnb@gmail.com" },
     ],
     national: [
       { name: "Dr. Prem Pal Bansal", affiliation: "Thapar Institute of Engineering & Technology, Patiala", email: "ppbansal@thapar.edu" },
@@ -209,8 +209,8 @@ const tracks: Track[] = [
       { name: "Dr. Deepak Swami", affiliation: "IIT Jodhpur", email: "dsswami@iitj.ac.in" },
       { name: "Dr. Dericks Praise Shukla", affiliation: "IIT Mandi", email: "dericks@iitmandi.ac.in" },
       { name: "Dr. Sagar Rohidas Chavan", affiliation: "IIT Ropar", email: "sagar@iitpr.ac.in" },
-      { name: "Dr. Rajinder Ghai", affiliation: "Drainage cum Mining and Geology, Water Resource Department, Patiala" },
-      { name: "Prof. Sanjiv Kumar Aggarwal", affiliation: "Maharaja Ranjit Singh Punjab Technical University, Bathinda" },
+      { name: "Dr. Rajinder Ghai", affiliation: "Drainage cum Mining and Geology, Water Resource Department, Patiala", email: "ghairajinder121@gmail.com" },
+      { name: "Prof. Sanjiv Kumar Aggarwal", affiliation: "Maharaja Ranjit Singh Punjab Technical University, Bathinda", email: "Sanjiv_aggarwal@rediffmail.com" },
     ],
   },
 ];

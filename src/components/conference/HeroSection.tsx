@@ -201,7 +201,7 @@ const HeroSection = () => {
           className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-10"
         >
           {[
-            { icon: CalendarDays, text: "30th November 2026" },
+            { icon: CalendarDays, text: "4th & 5th December 2026" },
             { icon: Monitor, text: "Hybrid Mode" },
             { icon: MapPin, text: "SLIET, Longowal, Punjab" },
           ].map((item) => (

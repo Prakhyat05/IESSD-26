@@ -7,8 +7,8 @@ import { SUBMISSION_DEADLINE_LABEL } from "@/lib/conference-dates";
 
 const dates = [
   { event: "Extended Abstract/Full Paper Submission", date: SUBMISSION_DEADLINE_LABEL, active: true },
-  { event: "Revised Paper Submission", date: "November 25, 2026" },
-  { event: "Conference Dates", date: "November 30, 2026", highlight: true },
+  { event: "Revised Paper Submission", date: "November 30, 2026" },
+  { event: "Conference Dates", date: "December 4–5, 2026", highlight: true },
 ];
 
 const trackEmails = [

@@ -3,7 +3,7 @@
 # 🌐 IESSD'26
 ### International Conference on Innovative Engineering Solutions for Sustainable Development
 
-**4th & 5th December 2026** • **Hybrid Mode (In-Person & Online)**  
+**30th November 2026** • **Hybrid Mode (In-Person & Online)**  
 **Sant Longowal Institute of Engineering & Technology (SLIET), Longowal, Punjab, India**  
 *(Deemed-to-be-University under MoE, Government of India)*
 
@@ -190,11 +190,11 @@ Hosted live on the web at [**https://iessd26.com/**](https://iessd26.com/), the 
 
 | Milestone | Date |
 | :--- | :--- |
-| **Extended Abstract / Full Paper Submission Deadline** | **November 25, 2026** |
+| **Extended Abstract / Full Paper Submission Deadline** | **November 20, 2026** |
 | **Notification of Acceptance / Review Feedback** | Rolling basis |
-| **Revised Camera-Ready Paper Submission** | **December 2, 2026** |
-| **Registration Deadline** | **November 30, 2026** |
-| **Conference Dates (Hybrid)** | **December 4–5, 2026** |
+| **Revised Camera-Ready Paper Submission** | **November 25, 2026** |
+| **Registration Deadline** | **November 28, 2026** |
+| **Conference Dates (Hybrid)** | **November 30, 2026** |
 
 > ℹ️ *Submission deadline label and countdown timer are centrally managed in `src/lib/conference-dates.ts` for synchronized presentation across the platform.*
 

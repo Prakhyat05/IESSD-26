@@ -272,7 +272,7 @@ const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
           >
-            4th & 5th December 2026 • SLIET, Longowal, Punjab
+            30th November 2026 • SLIET, Longowal, Punjab
           </motion.p>
 
           {/* Progress Bar */}

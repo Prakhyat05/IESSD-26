@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Linkedin, Globe } from "lucide-react";
+import { ArrowUpRight, Linkedin, Github, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import developerAsset from "@/assets/prakhyat-prakhar.jpg";
 
@@ -35,15 +35,7 @@ const DeveloperCredit = () => {
                 Prakhyat Prakhar
               </h2>
               <p className="mt-1 text-sm text-foreground">
-                Designed &amp; developed for IESSD’26 •{" "}
-                <a
-                  href="https://iessd26.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent hover:underline font-medium"
-                >
-                  https://iessd26.com
-                </a>
+                Designed &amp; developed for IESSD’26
               </p>
               <motion.div
                 initial={prefersReducedMotion ? false : { scaleX: 0 }}
@@ -57,13 +49,25 @@ const DeveloperCredit = () => {
           <div className="flex flex-wrap items-center justify-center gap-3 border-t border-border p-5 md:h-full md:border-l md:border-t-0 md:px-8">
             <Button asChild variant="outline" className="gap-2">
               <a
-                href="https://iessd26.com/"
+                href="https://prakhyatprakhar.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Open IESSD'26 live official website in a new tab"
+                aria-label="Open Prakhyat Prakhar's portfolio website in a new tab"
               >
                 <Globe aria-hidden="true" size={16} />
-                Live Website
+                Portfolio
+                <ArrowUpRight aria-hidden="true" size={14} />
+              </a>
+            </Button>
+            <Button asChild variant="outline" className="gap-2">
+              <a
+                href="https://github.com/Prakhyat05"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Prakhyat Prakhar's GitHub profile in a new tab"
+              >
+                <Github aria-hidden="true" size={16} />
+                GitHub
                 <ArrowUpRight aria-hidden="true" size={14} />
               </a>
             </Button>

@@ -384,6 +384,7 @@ This website was designed and developed by:
 **Prakhyat Prakhar**  
 - 💼 **LinkedIn:** [linkedin.com/in/prakhyat-prakhar](https://www.linkedin.com/in/prakhyat-prakhar/)  
 - 🐙 **GitHub:** [@Prakhyat05](https://github.com/Prakhyat05)  
+- 🌐 **Portfolio:** [prakhyatprakhar.netlify.app](https://prakhyatprakhar.netlify.app/)  
 - 🌟 **Role:** Full-Stack Design & Engineering for IESSD'26
 
 *Crafted with precision to showcase academic and engineering excellence on the global stage.*
